@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TimeSheetApp.data;
+using TimeSheetApp.Utils;
+
+namespace TimeSheetApp.Model
+{
+    public class ServiceMapTaskState
+    {
+        private readonly TimeSheetDBEntities _context;
+
+        public ServiceMapTaskState()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+        public  bool ModifierEtatDansDansMapTaskState(VProjectTaskUser vProjectTaskUser, string etat)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.MapTaskState.FirstOrDefault(x => x.MapTaskStateID == vProjectTaskUser.MapTaskStateID);
+                if (temp != null)
+                {
+                    temp.MapTaskStateName = etat;
+                    General.SaveContextChanges("modificaton dans MapTaskState id : "+ vProjectTaskUser.ProjectTaskUserID, _context);
+                    retour = true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return retour;
+        }
+
+       
+
+        public bool AjouterUnEngagEDansMapTaskState()
+        {
+            MapTaskState mapTaskState = new MapTaskState {MapTaskStateName = "Engagé"};
+            _context.MapTaskState.Add(mapTaskState);
+            General.SaveContextChanges("Ajout d'un engagé dans MapTaskState id : "+ mapTaskState.MapTaskStateID, _context);
+            return true;
+        }
+
+    }
+}

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad51e3cda74a42de840bd5a1b2eda7f8" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Address" Width="1.5" PointX="7.5" PointY="55.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Articles" Width="1.5" PointX="15" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Membership" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Paths" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Profile" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Roles" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_SchemaVersions" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.aspnet_WebEvent_Events" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.AutoLog" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.BADOrdersending" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Calendar" Width="1.5" PointX="5.25" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Codespec" Width="1.5" PointX="3" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Codetype" Width="1.5" PointX="0.75" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Customer" Width="1.5" PointX="5.25" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Delivery" Width="1.5" PointX="12.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Deliverysubject" Width="1.5" PointX="15" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.dtproperties" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.EfficyContact" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.EfficyProduct" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.FilesendTemplate" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Historystatistics" Width="1.5" PointX="15.5" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Holiday" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Invoice" Width="1.5" PointX="10.5" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Invoicedetail" Width="1.5" PointX="17.75" PointY="56.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Invoicedetailsending" Width="1.5" PointX="20" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Keyword" Width="1.5" PointX="5.25" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.KeywordCondition" Width="1.5" PointX="17.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.KeywordGroup" Width="1.5" PointX="12.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.KeywordLine" Width="1.5" PointX="15" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Logdata" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.MapXMLtemplate" Width="1.5" PointX="12.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.MediaFigureAll" Width="1.5" PointX="5.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Order" Width="1.5" PointX="9.75" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.OrderFileMove" Width="1.5" PointX="12" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Orderfilesend" Width="1.5" PointX="15" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.OrderIdAsText" Width="1.5" PointX="12" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Orderlink" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Ordersending" Width="1.5" PointX="9.75" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Ordersendingschedule" Width="1.5" PointX="12" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Ordersubscription" Width="1.5" PointX="18" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Ordersubscriptionschedule" Width="1.5" PointX="7.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Ordertotal" Width="1.5" PointX="18" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Owner" Width="1.5" PointX="5.25" PointY="65.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Period" Width="1.5" PointX="7.5" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Planning" Width="1.5" PointX="15" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Postalcode" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.PressReviewLabel" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Production" Width="1.5" PointX="20.5" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Productionflyers" Width="1.5" PointX="22.5" PointY="57.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Productionsending" Width="1.5" PointX="24.75" PointY="56.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Productionsendingtill20150101" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Productiontill20150101" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ProductionToExport" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Producttypegroup" Width="1.5" PointX="5.25" PointY="68.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Publication" Width="1.5" PointX="13.25" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Publicationgroup" Width="1.5" PointX="15.5" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Publisher" Width="1.5" PointX="5.25" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Royalty" Width="1.5" PointX="15.5" PointY="62.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Section" Width="1.5" PointX="11.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Sendingprice" Width="1.5" PointX="5.25" PointY="80.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.SocialMediaArticle" Width="1.5" PointX="21" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.SocialMediaReport" Width="1.5" PointX="12" PointY="79.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.SocialMediaReportType" Width="1.5" PointX="12" PointY="82.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.SocialMediaTempOrder" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.SocialMediaType" Width="1.5" PointX="18.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Subscription" Width="1.5" PointX="15.5" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.sysdiagrams" Width="1.5" PointX="15.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Systemparameter" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Tariff" Width="1.5" PointX="5.25" PointY="83.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.TempNewID" Width="1.5" PointX="7.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.TP_AEXCLURE" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.User" Width="1.5" PointX="5.25" PointY="86.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Userlogonhistory" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Userorder" Width="1.5" PointX="12" PointY="95.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.AP_EncMan" Width="1.5" PointX="19.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.AP_Retours" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ExportToNewbase" Width="1.5" PointX="19.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Filtre_Pays" Width="1.5" PointX="19.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Invoicenumber" Width="1.5" PointX="5.25" PointY="90.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Orderfilesend2" Width="1.5" PointX="19.75" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Address_Ordersending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Address_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Address_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Address_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Address_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Address_FK6" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Customer_Address_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publisher_Address_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Articles_Delivery" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Me__Appli__1B4BEDF5" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Pa__Appli__4CE34989" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Ro__Appli__39D07515" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Us__Appli__0B15862C" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Me__UserI__1C40122E" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Pe__PathI__529C22DF" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Pe__PathI__566CB3C3" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Pe__UserI__5760D7FC" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK__aspnet_Pr__UserI__30470ADB" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Calendar_Period_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Calendar_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Periodicity_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Weekday_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Customer_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Customer_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Customer_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Customer_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Customer_FK6" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoice_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoice_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicedetail_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicedetail_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicedetail_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicedetail_FK6" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicedetailsending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicenumber_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Invoicenumber_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Order_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Order_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Ordersending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Ordersending_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Ordersubscription_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Ordersubscription_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Ordertotal_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Owner_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Production_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Production_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Productionflyers_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Productionflyers_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Productionsending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Producttypegroup_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Producttypegroup_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK4" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK5" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK7" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Publication_FK8" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Royalty_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Sendingprice_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Subscription_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Tariff_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_Tariff_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_User_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Codespec_User_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Codespec_Codetype" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Keyword_Codespec" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Keyword_Codespec1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Customer_Invoice_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Customer_Order_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Customer_Production_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Deliverysubject_Delivery" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Planning_Delivery" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Historystatistics_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Invoice_Invoicedetail_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Invoicedetail_Invoicedetailsending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Invoicedetailsending_Invoicedetailsending" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_KeywordCondition_KeywordLine" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_KeywordLine_KeywordGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Orderfilesend_MapXMLtemplate" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_OrderFileMove_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_Orderfilesend_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_OrderIdAsText_OrderIdAsText" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_SocialMediaArticle_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_SocialMediaReportType_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Ordersendingschedule_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Ordersubscription_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Ordertotal_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Production_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Productionflyers_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Order_Userorder_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Ordersubscription_Ordersending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Postalcode_Postalcode_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Production_Productionsending_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Production_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Productionflyers_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Publication_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Royalty_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publication_Subscription_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publisher_Publication_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.FK_SocialMediaArticle_SocialMediaType" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.aspnet_UsersInRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Orderaddress" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.OrderSocialMediaReport" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publicationinpublicationgroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Publicationlanguage" ManuallyRouted="false" />
+        <AssociationConnector Association="AuxipressJumboPilotModel.Subscriptionaddress" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVContact" Width="1.5" PointX="10.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVContactMedia" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVContactSubject" Width="1.5" PointX="14.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVJournalistDetail" Width="1.5" PointX="16.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMapCountry" Width="1.5" PointX="18.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMapLanguage" Width="1.5" PointX="20.75" PointY="19.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMedia" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMediaFigure" Width="1.5" PointX="22.75" PointY="11.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMediaFigureAll" Width="1.5" PointX="22.75" PointY="14.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMediaGroup" Width="1.5" PointX="8.75" PointY="23.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVMediaLanguage" Width="1.5" PointX="10.75" PointY="23.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVPublicationGroup" Width="1.5" PointX="12.75" PointY="23.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.APVUser" Width="1.5" PointX="18.75" PointY="23.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Facturation_Fred" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.Tests_Fred" Width="1.5" PointX="0.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VActiveOrders" Width="1.5" PointX="2.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VAddress" Width="1.5" PointX="24.75" PointY="6.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VArticlesToSend" Width="1.5" PointX="24.75" PointY="12.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VBaroStats" Width="1.5" PointX="14.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustomers" Width="1.5" PointX="24.75" PointY="16.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustomersDetails" Width="1.5" PointX="24.75" PointY="19.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustomersInt" Width="1.5" PointX="20.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustomersInternational" Width="1.5" PointX="4.75" PointY="25.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustomersInternationalDetails" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VCustWithActiveOrders" Width="1.5" PointX="26.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VFIBEPExport" Width="1.5" PointX="6.75" PointY="26.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.viewAmount" Width="1.5" PointX="8.75" PointY="26.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ViewCustomers" Width="1.5" PointX="26.75" PointY="10.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ViewForArchives" Width="1.5" PointX="10.75" PointY="26.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.viewOrderName" Width="1.5" PointX="26.75" PointY="18.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ViewProduction" Width="1.5" PointX="26.75" PointY="21.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.ViewTotalArticles" Width="1.5" PointX="22.75" PointY="26.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VKeywords" Width="1.5" PointX="24.75" PointY="26.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VNewBaseRubric" Width="1.5" PointX="26.75" PointY="25.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrderAdresses" Width="1.5" PointX="0.75" PointY="27.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrderFileMvList" Width="1.5" PointX="28.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrders" Width="1.5" PointX="28.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrdersEnd" Width="1.5" PointX="28.75" PointY="9.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrderSendingDetails" Width="1.5" PointX="12.75" PointY="28.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrdersEndSubscription" Width="1.5" PointX="28.75" PointY="13.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrdersRTV" Width="1.5" PointX="14.75" PointY="28.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VOrdersWeb" Width="1.5" PointX="28.75" PointY="20.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.VProductionFlyers" Width="1.5" PointX="28.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_Applications" Width="1.5" PointX="8.75" PointY="29.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_MembershipUsers" Width="1.5" PointX="26.75" PointY="29.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_Profiles" Width="1.5" PointX="28.75" PointY="29.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_Roles" Width="1.5" PointX="30.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_Users" Width="1.5" PointX="2.75" PointY="30.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_UsersInRoles" Width="1.5" PointX="30.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_WebPartState_Paths" Width="1.5" PointX="30.75" PointY="6.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_WebPartState_Shared" Width="1.5" PointX="30.75" PointY="9.75" />
+        <EntityTypeShape EntityType="AuxipressJumboPilotModel.vw_aspnet_WebPartState_User" Width="1.5" PointX="30.75" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

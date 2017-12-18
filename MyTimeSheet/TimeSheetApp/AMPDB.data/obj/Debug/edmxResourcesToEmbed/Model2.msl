@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="APMDBModelStoreContainer" CdmEntityContainer="APMDBEntities">
+    <EntitySetMapping Name="CleanFilesDetail">
+      <EntityTypeMapping TypeName="APMDBModel.CleanFilesDetail">
+        <MappingFragment StoreEntitySet="CleanFilesDetail">
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="FolderPath" ColumnName="FolderPath" />
+          <ScalarProperty Name="KeepLastUnit" ColumnName="KeepLastUnit" />
+          <ScalarProperty Name="KeepLastValue" ColumnName="KeepLastValue" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="DeleteSubfolders" ColumnName="DeleteSubfolders" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECCategory">
+      <EntityTypeMapping TypeName="APMDBModel.ECCategory">
+        <MappingFragment StoreEntitySet="ECCategory">
+          <ScalarProperty Name="ECCategoryID" ColumnName="ECCategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECWriters">
+      <EntityTypeMapping TypeName="APMDBModel.ECWriters">
+        <MappingFragment StoreEntitySet="ECWriters">
+          <ScalarProperty Name="ECWritersID" ColumnName="ECWritersID" />
+          <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="NbOfFiles" ColumnName="NbOfFiles" />
+          <ScalarProperty Name="ADName" ColumnName="ADName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EPWriters">
+      <EntityTypeMapping TypeName="APMDBModel.EPWriters">
+        <MappingFragment StoreEntitySet="EPWriters">
+          <ScalarProperty Name="EPWritersID" ColumnName="EPWritersID" />
+          <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="NbOfFiles" ColumnName="NbOfFiles" />
+          <ScalarProperty Name="ADName" ColumnName="ADName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternationalDir">
+      <EntityTypeMapping TypeName="APMDBModel.InternationalDir">
+        <MappingFragment StoreEntitySet="InternationalDir">
+          <ScalarProperty Name="InternationalDirID" ColumnName="InternationalDirID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="FilePrefix" ColumnName="FilePrefix" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LockFiles">
+      <EntityTypeMapping TypeName="APMDBModel.LockFiles">
+        <MappingFragment StoreEntitySet="LockFiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="paths" ColumnName="paths" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapCountry">
+      <EntityTypeMapping TypeName="APMDBModel.MapCountry">
+        <MappingFragment StoreEntitySet="MapCountry">
+          <ScalarProperty Name="MapCountryID" ColumnName="MapCountryID" />
+          <ScalarProperty Name="NewBaseName" ColumnName="NewBaseName" />
+          <ScalarProperty Name="IsoCode" ColumnName="IsoCode" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapLanguage">
+      <EntityTypeMapping TypeName="APMDBModel.MapLanguage">
+        <MappingFragment StoreEntitySet="MapLanguage">
+          <ScalarProperty Name="MapLanguageID" ColumnName="MapLanguageID" />
+          <ScalarProperty Name="NewBaseName" ColumnName="NewBaseName" />
+          <ScalarProperty Name="IsoCode" ColumnName="IsoCode" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapModule">
+      <EntityTypeMapping TypeName="APMDBModel.MapModule">
+        <MappingFragment StoreEntitySet="MapModule">
+          <ScalarProperty Name="MapModuleID" ColumnName="MapModuleID" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="TimeLife" ColumnName="TimeLife" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="IsService" ColumnName="IsService" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapSector">
+      <EntityTypeMapping TypeName="APMDBModel.MapSector">
+        <MappingFragment StoreEntitySet="MapSector">
+          <ScalarProperty Name="MapSectorID" ColumnName="MapSectorID" />
+          <ScalarProperty Name="NewBaseDir" ColumnName="NewBaseDir" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapStatus">
+      <EntityTypeMapping TypeName="APMDBModel.MapStatus">
+        <MappingFragment StoreEntitySet="MapStatus">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapWS">
+      <EntityTypeMapping TypeName="APMDBModel.MapWS">
+        <MappingFragment StoreEntitySet="MapWS">
+          <ScalarProperty Name="WSID" ColumnName="WSID" />
+          <ScalarProperty Name="WSName" ColumnName="WSName" />
+          <ScalarProperty Name="WSDescription" ColumnName="WSDescription" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mediargus">
+      <EntityTypeMapping TypeName="APMDBModel.Mediargus">
+        <MappingFragment StoreEntitySet="Mediargus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
+          <ScalarProperty Name="Sourcename" ColumnName="Sourcename" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediargusFTPExclude">
+      <EntityTypeMapping TypeName="APMDBModel.MediargusFTPExclude">
+        <MappingFragment StoreEntitySet="MediargusFTPExclude">
+          <ScalarProperty Name="MediargusFTPExcludeID" ColumnName="MediargusFTPExcludeID" />
+          <ScalarProperty Name="DirectoryName" ColumnName="DirectoryName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediargusFTPStatus">
+      <EntityTypeMapping TypeName="APMDBModel.MediargusFTPStatus">
+        <MappingFragment StoreEntitySet="MediargusFTPStatus">
+          <ScalarProperty Name="MediargusFTPStatusID" ColumnName="MediargusFTPStatusID" />
+          <ScalarProperty Name="DirName" ColumnName="DirName" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoveFilesDetail">
+      <EntityTypeMapping TypeName="APMDBModel.MoveFilesDetail">
+        <MappingFragment StoreEntitySet="MoveFilesDetail">
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="Subfolders" ColumnName="Subfolders" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DeleteEmptySubfolders" ColumnName="DeleteEmptySubfolders" />
+          <ScalarProperty Name="Timing" ColumnName="Timing" />
+          <ScalarProperty Name="DaysToKeep" ColumnName="DaysToKeep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewbaseServers">
+      <EntityTypeMapping TypeName="APMDBModel.NewbaseServers">
+        <MappingFragment StoreEntitySet="NewbaseServers">
+          <ScalarProperty Name="NewbaseServerID" ColumnName="NewbaseServerID" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="IsOnError" ColumnName="IsOnError" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SendMail" ColumnName="SendMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewbaseServices">
+      <EntityTypeMapping TypeName="APMDBModel.NewbaseServices">
+        <MappingFragment StoreEntitySet="NewbaseServices">
+          <ScalarProperty Name="NewbaseServiceID" ColumnName="NewbaseServiceID" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="NewbaseServerID" ColumnName="NewbaseServerID" />
+          <ScalarProperty Name="IsOnError" ColumnName="IsOnError" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SendMail" ColumnName="SendMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameters">
+      <EntityTypeMapping TypeName="APMDBModel.Parameters">
+        <MappingFragment StoreEntitySet="Parameters">
+          <ScalarProperty Name="APMDBID" ColumnName="APMDBID" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessState">
+      <EntityTypeMapping TypeName="APMDBModel.ProcessState">
+        <MappingFragment StoreEntitySet="ProcessState">
+          <ScalarProperty Name="ProcessStateId" ColumnName="ProcessStateId" />
+          <ScalarProperty Name="MapModuleId" ColumnName="MapModuleId" />
+          <ScalarProperty Name="JobProcess" ColumnName="JobProcess" />
+          <ScalarProperty Name="ProcessStartTime" ColumnName="ProcessStartTime" />
+          <ScalarProperty Name="ProcessState1" ColumnName="ProcessState" />
+          <ScalarProperty Name="MaxAlert" ColumnName="MaxAlert" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="APMDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UICustomerMail">
+      <EntityTypeMapping TypeName="APMDBModel.UICustomerMail">
+        <MappingFragment StoreEntitySet="UICustomerMail">
+          <ScalarProperty Name="UICustomerMailID" ColumnName="UICustomerMailID" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSAccess">
+      <EntityTypeMapping TypeName="APMDBModel.WSAccess">
+        <MappingFragment StoreEntitySet="WSAccess">
+          <ScalarProperty Name="WSAccessID" ColumnName="WSAccessID" />
+          <ScalarProperty Name="WSID" ColumnName="WSID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCleanFiles">
+      <EntityTypeMapping TypeName="APMDBModel.VCleanFiles">
+        <MappingFragment StoreEntitySet="VCleanFiles">
+          <ScalarProperty Name="APMDBID" ColumnName="APMDBID" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="FolderPath" ColumnName="FolderPath" />
+          <ScalarProperty Name="KeepLastUnit" ColumnName="KeepLastUnit" />
+          <ScalarProperty Name="KeepLastValue" ColumnName="KeepLastValue" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="DeleteSubfolders" ColumnName="DeleteSubfolders" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VECWriters">
+      <EntityTypeMapping TypeName="APMDBModel.VECWriters">
+        <MappingFragment StoreEntitySet="VECWriters">
+          <ScalarProperty Name="ECWritersID" ColumnName="ECWritersID" />
+          <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="DNS" ColumnName="DNS" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEPWriters">
+      <EntityTypeMapping TypeName="APMDBModel.VEPWriters">
+        <MappingFragment StoreEntitySet="VEPWriters">
+          <ScalarProperty Name="EPWritersID" ColumnName="EPWritersID" />
+          <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+          <ScalarProperty Name="Cat1" ColumnName="Cat1" />
+          <ScalarProperty Name="Cat2" ColumnName="Cat2" />
+          <ScalarProperty Name="Cat34" ColumnName="Cat34" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VMediargus">
+      <EntityTypeMapping TypeName="APMDBModel.VMediargus">
+        <MappingFragment StoreEntitySet="VMediargus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
+          <ScalarProperty Name="Sourcename" ColumnName="Sourcename" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

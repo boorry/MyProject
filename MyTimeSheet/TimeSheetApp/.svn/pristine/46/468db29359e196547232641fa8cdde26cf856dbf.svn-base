@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="TimeSheetApp.View.TacheView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TimeSheetApp.View"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+            
+             DataContext="{Binding TacheViewModelVm, Source={StaticResource Locator}}"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border  BorderBrush="Gray" BorderThickness="1" Grid.ColumnSpan="3">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <DockPanel Margin="10,0,0,0">
+                    <Button  Command="{Binding AfficherDetailCommand}" Content="{materialDesign:PackIcon Loupe}" Style="{DynamicResource ButtonMenu}" ToolTip="Détail" />
+                    <Button  Command="{Binding AjoutCommand}"  Content="{materialDesign:PackIcon Plus}" Style="{DynamicResource ButtonMenu}" ToolTip="Ajouter" />
+                    <Button Command="{Binding ActualiserCommand}" Content="{materialDesign:PackIcon Refresh}" Style="{DynamicResource ButtonMenu}" ToolTip="Actualiser" />
+                </DockPanel>
+            </Grid>
+        </Border>
+
+
+        <Grid Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <DockPanel Width="423">
+                <TextBlock  Height="25"  Margin="15,0,0,0" FontWeight="DemiBold" FontSize="14"  HorizontalAlignment="Left" Foreground="DimGray" Text="Filtre"/>
+                <TextBox BorderBrush="DimGray" Margin="10,0,0,0" Height="30" BorderThickness="1" Text="{Binding Filtre, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}" Width="300" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged">
+                            <command:EventToCommand Command="{Binding  FiltrerCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+                <Button Command="{Binding CancelFiltreCommand}" Margin="2,1,0,0" Padding="0" Height="30" Width="30" BorderBrush="Gray" Content="{materialDesign:PackIcon Close}" Background="DeepSkyBlue"/>
+                <Button Margin="0,1,0,0" Command="{Binding }" Padding="0" Height="30" Width="30" Content="{materialDesign:PackIcon AccountSearch}" BorderBrush="Gray" Background=" DeepSkyBlue" />
+                <!--<CheckBox  Margin="20,0" Content="Uniquement mes Taches" IsChecked="{Binding IsUniquementMesTaches,Mode=TwoWay}"></CheckBox>-->
+
+            </DockPanel>
+
+        </Grid>
+
+
+        <Border  Grid.Row="2" BorderBrush="Gray" BorderThickness="1" Grid.ColumnSpan="3">
+            <Grid >
+                <DataGrid  AlternatingRowBackground="#ebefef" AlternationCount="2"  AutoGenerateColumns="false" ItemsSource="{Binding LstTache,Mode= TwoWay,UpdateSourceTrigger=Default}" SelectedItem="{Binding Selection, Mode= TwoWay}" IsReadOnly="True">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Tâches"  Binding="{Binding TaskName , Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Créateur"  Binding="{Binding CreatedBy , Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Date de création"  Binding="{Binding CreationDate ,StringFormat={}\{0:dd/MM/yyyy HH:mm:ss\}, Mode=TwoWay,IsAsync=False}" Width="*"/>
+                        <DataGridTextColumn Header="Modificateur"  Binding="{Binding ModifiedBy, Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Date de modification"  Binding="{Binding  ModificationDate,StringFormat={}\{0:dd/MM/yyyy HH:mm:ss\}, Mode=TwoWay}" Width="*"/>
+                        <DataGridTemplateColumn Header="Actif" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Active, Mode=TwoWay}" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.CheckOuPasCommand, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <command:EventToCommand Command="{Binding AfficherDetailCommand}"  
+                                CommandParameter="{Binding Selection}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+
+                </DataGrid>
+            </Grid>
+        </Border>
+        <Label Grid.Row="3" Content="{Binding NbResult, Mode = TwoWay}" Grid.ColumnSpan="3"></Label>
+    </Grid>
+
+
+
+    <UserControl.Resources>
+        <Style x:Key="ButtonMenu" TargetType="Button" >
+            <Setter Property="Foreground" Value="Gray" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Width" Value="35"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="BorderBrush" Value="White" ></Setter>
+        </Style>
+    </UserControl.Resources>
+</UserControl>

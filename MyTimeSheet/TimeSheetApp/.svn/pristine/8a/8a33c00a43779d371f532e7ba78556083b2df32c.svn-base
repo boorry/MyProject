@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88E26E63-FFD7-4772-AE0E-910218BE38EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeSheetApp</RootNamespace>
+    <AssemblyName>TimeSheetApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BespokeFusion, Version=1.0.1.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialMessageBox.1.0.0.11\lib\BespokeFusion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Diacritics, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Diacritics.1.0.5\lib\net45\Diacritics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2017.3.1018.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Logs\Logger.cs" />
+    <Compile Include="Logs\LoggingService.cs" />
+    <Compile Include="Model\IProjectService.cs" />
+    <Compile Include="Model\IService.cs" />
+    <Compile Include="Model\MyValidationRules.cs" />
+    <Compile Include="Model\ProjectService.cs" />
+    <Compile Include="Model\Service.cs" />
+    <Compile Include="Themes\LeftMarginMultiplierConverter.cs" />
+    <Compile Include="Themes\TreeViewItemExtensions.cs" />
+    <Compile Include="Utils\General.cs" />
+    <Compile Include="Utils\MaterialMessageBox.cs" />
+    <Compile Include="Utils\MessageBoxWindow.xaml.cs" />
+    <Compile Include="Utils\Outils.cs" />
+    <Compile Include="ViewModel\AddNewProjectViewModel.cs" />
+    <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\DetailProjetViewModel.cs" />
+    <Compile Include="ViewModel\HistroryProjectViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ProjetViewModel.cs" />
+    <Compile Include="ViewModel\SearchClientViewModel.cs" />
+    <Compile Include="ViewModel\TacheAjoutViewModel.cs" />
+    <Compile Include="ViewModel\TacheDetailViewModel.cs" />
+    <Compile Include="ViewModel\TacheViewModel.cs" />
+    <Compile Include="ViewModel\TimeSheetDetailViewModel.cs" />
+    <Compile Include="ViewModel\TimeSheetAjoutViewModel.cs" />
+    <Compile Include="ViewModel\TimeSheetViewModel.cs" />
+    <Compile Include="ViewModel\UserTimeHistoryViewModel.cs" />
+    <Compile Include="ViewModel\UserTimeViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AddNewProjectView.xaml.cs">
+      <DependentUpon>AddNewProjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumerView.xaml.cs">
+      <DependentUpon>CustumerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetailProjetView.xaml.cs">
+      <DependentUpon>DetailProjetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoriqueProjetView.xaml.cs">
+      <DependentUpon>HistoriqueProjetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProjetsView.xaml.cs">
+      <DependentUpon>ProjetsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResearchClientView.xaml.cs">
+      <DependentUpon>ResearchClientView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TacheAjoutView.xaml.cs">
+      <DependentUpon>TacheAjoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TacheDetailView.xaml.cs">
+      <DependentUpon>TacheDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TacheView.xaml.cs">
+      <DependentUpon>TacheView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TimeSheetDetailView.xaml.cs">
+      <DependentUpon>TimeSheetDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TimeSheetAjoutView.xaml.cs">
+      <DependentUpon>TimeSheetAjoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TimeSheetView.xaml.cs">
+      <DependentUpon>TimeSheetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserTimeHistoryView.xaml.cs">
+      <DependentUpon>UserTimeHistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserTimeView.xaml.cs">
+      <DependentUpon>UserTimeView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utils\MessageBoxWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AddNewProjectView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CustumerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DetailProjetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HistoriqueProjetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProjetsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResearchClientView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TacheAjoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TacheDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TacheView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TimeSheetDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TimeSheetAjoutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TimeSheetView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserTimeHistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserTimeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Resource\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMPDB.data\AMPDB.data.csproj">
+      <Project>{2E7EF0E9-5E87-489C-91A6-691B341BB3AD}</Project>
+      <Name>AMPDB.data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyDataCustomer.data\MyDataCustomer.data.csproj">
+      <Project>{cd1d5e3c-f227-4b12-ae4d-e63248c99b9d}</Project>
+      <Name>MyDataCustomer.data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeSheetApp.data\TimeSheetApp.data.csproj">
+      <Project>{629c9181-bc92-4f47-87c4-18a108033ac3}</Project>
+      <Name>TimeSheetApp.data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\arrow_left2.png" />
+    <Resource Include="Resource\AuxiAlert.gif" />
+    <Resource Include="Resource\cancel.png" />
+    <Resource Include="Resource\DrawingPin2_Gray.ico" />
+    <Resource Include="Resource\Edit2.png" />
+    <Resource Include="Resource\icoDelete.png" />
+    <Resource Include="Resource\icon1.png" />
+    <Resource Include="Resource\icon2.png" />
+    <Resource Include="Resource\icon3.png" />
+    <Resource Include="Resource\list-with-dot.png" />
+    <Resource Include="Resource\list-with-dots.png" />
+    <Resource Include="Resource\logo_auxipress.png" />
+    <Resource Include="Resource\minus1.png" />
+    <Resource Include="Resource\off1.png" />
+    <Resource Include="Resource\pause.png" />
+    <Resource Include="Resource\play-button.png" />
+    <Resource Include="Resource\plus1.png" />
+    <Resource Include="Resource\preview.png" />
+    <Resource Include="Resource\refresh_small1.png" />
+    <Resource Include="Resource\run.png" />
+    <Resource Include="Resource\save_small.png" />
+    <Resource Include="Resource\save_small1.png" />
+    <Resource Include="Resource\search2.png" />
+    <Resource Include="Resource\SourcesIcon.png" />
+    <Resource Include="Resource\Stack Add-WF.png" />
+    <Resource Include="Resource\stop.png" />
+    <Resource Include="Resource\thin-arrowheads-pointing-down.png" />
+    <Resource Include="Resource\uniq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\buffer.png" />
+    <Resource Include="Resource\folder.png" />
+    <Resource Include="Resource\timer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD1D5E3C-F227-4B12-AE4D-E63248C99B9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyDataCustomer.data</RootNamespace>
+    <AssemblyName>MyDataCustomer.data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVContact.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVContactMedia.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVContactSubject.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVJournalistDetail.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMapCountry.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMapLanguage.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMedia.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMediaFigure.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMediaFigureAll.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMediaGroup.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVMediaLanguage.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVPublicationGroup.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APVUser.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AP_EncMan.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AP_Retours.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Articles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Applications.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Paths.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Roles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_SchemaVersions.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Users.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_WebEvent_Events.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoLog.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BADOrdersending.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Codespec.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Codetype.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deliverysubject.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dtproperties.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EfficyContact.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EfficyProduct.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToNewbase.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Facturation_Fred.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FilesendTemplate.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Filtre_Pays.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Historystatistics.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Holiday.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicedetail.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicedetailsending.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicenumber.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Keyword.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KeywordCondition.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KeywordGroup.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KeywordLine.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Logdata.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MapXMLtemplate.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaFigureAll.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderFileMove.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orderfilesend.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orderfilesend2.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderIdAsText.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orderlink.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordersending.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordersendingschedule.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordersubscription.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordersubscriptionschedule.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordertotal.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Owner.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Period.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Planning.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Postalcode.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PressReviewLabel.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productionflyers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productionsending.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productionsendingtill20150101.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productiontill20150101.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionToExport.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Producttypegroup.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publication.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Publicationgroup.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Publisher.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Royalty.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Section.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sendingprice.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaArticle.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaReport.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaReportType.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaTempOrder.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaType.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Systemparameter.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tariff.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempNewID.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tests_Fred.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TP_AEXCLURE.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Userlogonhistory.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Userorder.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VActiveOrders.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VAddress.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VArticlesToSend.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VBaroStats.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustomers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustomersDetails.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustomersInt.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustomersInternational.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustomersInternationalDetails.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCustWithActiveOrders.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VFIBEPExport.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="viewAmount.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForArchives.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="viewOrderName.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduction.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTotalArticles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VKeywords.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VNewBaseRubric.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrderAdresses.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrderFileMvList.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrders.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrdersEnd.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrderSendingDetails.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrdersEndSubscription.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrdersRTV.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOrdersWeb.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VProductionFlyers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_Applications.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_MembershipUsers.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_Profiles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_Roles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_Users.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_UsersInRoles.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_WebPartState_Paths.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_WebPartState_Shared.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_aspnet_WebPartState_User.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model4.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model4.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Model4.edmx.diagram">
+      <DependentUpon>Model4.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model4.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model4.Context.cs</LastGenOutput>
+      <DependentUpon>Model4.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model4.edmx</DependentUpon>
+      <LastGenOutput>Model4.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

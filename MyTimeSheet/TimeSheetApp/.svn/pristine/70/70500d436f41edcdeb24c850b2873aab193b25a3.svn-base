@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TimeSheetDBModelStoreContainer" CdmEntityContainer="TimeSheetDBEntities">
+    <EntitySetMapping Name="MapTaskState">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.MapTaskState">
+        <MappingFragment StoreEntitySet="MapTaskState">
+          <ScalarProperty Name="MapTaskStateID" ColumnName="MapTaskStateID" />
+          <ScalarProperty Name="MapTaskStateName" ColumnName="MapTaskStateName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EstimateDurationProject" ColumnName="EstimateDurationProject" />
+          <ScalarProperty Name="DurationProject" ColumnName="DurationProject" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectHistory">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.ProjectHistory">
+        <MappingFragment StoreEntitySet="ProjectHistory">
+          <ScalarProperty Name="ProjectHistoryID" ColumnName="ProjectHistoryID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+          <ScalarProperty Name="NewTime" ColumnName="NewTime" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTask">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.ProjectTask">
+        <MappingFragment StoreEntitySet="ProjectTask">
+          <ScalarProperty Name="ProjectTaskID" ColumnName="ProjectTaskID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTaskUser">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.ProjectTaskUser">
+        <MappingFragment StoreEntitySet="ProjectTaskUser">
+          <ScalarProperty Name="ProjectTaskUserID" ColumnName="ProjectTaskUserID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="StartTask" ColumnName="StartTask" />
+          <ScalarProperty Name="EndTask" ColumnName="EndTask" />
+          <ScalarProperty Name="ExecutionTime" ColumnName="ExecutionTime" />
+          <ScalarProperty Name="MapTaskStateID" ColumnName="MapTaskStateID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Task">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskUserTime">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.TaskUserTime">
+        <MappingFragment StoreEntitySet="TaskUserTime">
+          <ScalarProperty Name="TaskUserTimeID" ColumnName="TaskUserTimeID" />
+          <ScalarProperty Name="ProjectTaskUserID" ColumnName="ProjectTaskUserID" />
+          <ScalarProperty Name="MapTaskStateName" ColumnName="MapTaskStateName" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ExecutionTime" ColumnName="ExecutionTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VProjectHistory">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.VProjectHistory">
+        <MappingFragment StoreEntitySet="VProjectHistory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+          <ScalarProperty Name="ProjectHistoryID" ColumnName="ProjectHistoryID" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VProjectTask">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.VProjectTask">
+        <MappingFragment StoreEntitySet="VProjectTask">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VProjectTaskUser">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.VProjectTaskUser">
+        <MappingFragment StoreEntitySet="VProjectTaskUser">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="MapTaskStateName" ColumnName="MapTaskStateName" />
+          <ScalarProperty Name="StartTask" ColumnName="StartTask" />
+          <ScalarProperty Name="EndTask" ColumnName="EndTask" />
+          <ScalarProperty Name="ExecutionTime" ColumnName="ExecutionTime" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProjectTaskUserID" ColumnName="ProjectTaskUserID" />
+          <ScalarProperty Name="MapTaskStateID" ColumnName="MapTaskStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VTaskTime">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.VTaskTime">
+        <MappingFragment StoreEntitySet="VTaskTime">
+          <ScalarProperty Name="TaskUserTimeID" ColumnName="TaskUserTimeID" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectTaskUserID" ColumnName="ProjectTaskUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskUserTimeHistory">
+      <EntityTypeMapping TypeName="TimeSheetDBModel.TaskUserTimeHistory">
+        <MappingFragment StoreEntitySet="TaskUserTimeHistory">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="TaskUserTimeID" ColumnName="TaskUserTimeID" />
+          <ScalarProperty Name="TaskUserTimeHistoryID" ColumnName="TaskUserTimeHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

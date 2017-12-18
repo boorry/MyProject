@@ -1,0 +1,174 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using NLog;
+using TimeSheetApp.data;
+using Task = TimeSheetApp.data.Task;
+using TimeSheetApp.Logs;
+using TimeSheetApp.Utils;
+using Logger = TimeSheetApp.Logs.Logger;
+
+
+namespace TimeSheetApp.Model
+{
+    class ServiceTache
+    {
+        private readonly TimeSheetDBEntities _context;
+        public ServiceTache()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+        public List<Task> ChargerContenuLstTache()
+        {
+            try
+            {
+                var liste = _context.Task.ToList();
+                return liste;
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+
+
+        public List<Task> ChargerContenuTasks(string filtre,bool isUniquementMesTaches)
+        {
+            try
+            {
+
+                var result = _context.Task.Where(t => t.TaskName.Contains(filtre) || t.CreatedBy.Contains(filtre) || t.ModifiedBy.Contains(filtre) || filtre.ToString().Equals("")).ToList();
+                var lstResult = result.ToList();
+
+                //filtre par checkBox
+                if (isUniquementMesTaches)
+                    lstResult.RemoveAll(t => t.CreatedBy != Environment.UserName);
+
+
+                return lstResult;
+            }
+            catch (Exception)
+            {
+                //  MessageBox.Show();
+                return null;
+            }
+
+        }
+
+        public Task ChargerUneTache(Task task)
+        {
+            try
+            {
+                var result= _context.Task.FirstOrDefault(t => t.TaskID == task.TaskID);
+                return result;
+            }
+            catch (Exception)
+            {
+                //  MessageBox.Show();
+                return null;
+            }
+
+        }
+
+        public bool ModifierUneTache(Task update)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.Task.FirstOrDefault(x => x.TaskID == update.TaskID);
+                if (temp != null)
+                {
+                   
+                    temp.ModifiedBy = update.ModifiedBy;
+                    temp.TaskName = update.TaskName;
+                    temp.CreatedBy = update.CreatedBy;
+                    temp.CreationDate = update.CreationDate;
+                    temp.ModificationDate = update.ModificationDate;
+                    temp.Active = update.Active;
+
+                    General.SaveContextChanges("modification d'une tahe id : " + temp.TaskID, _context);
+                    // _context.SaveChanges();
+                    retour = true;
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                
+                return false;
+            }
+            return retour;
+        }
+
+        public bool ModifierEtatDUneTacheAPartirDeVProjectTaskUser(VProjectTaskUser vProjectTaskUser,bool active)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.Task.FirstOrDefault(x => x.TaskID == vProjectTaskUser.TaskID);
+                if (temp != null)
+                {
+
+
+                    temp.Active = active;
+
+                    General.SaveContextChanges("modification d'une tahe id : " + temp.TaskID, _context);
+                    retour = true;
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+
+                return false;
+            }
+            return retour;
+        }
+
+        public bool AjouterDansTask(Task task)
+        {
+
+            try
+            {
+                //taskUserTimeHistory.CreatedBy=taskUserTime.
+                _context.Task.Add(task);
+                General.SaveContextChanges("ajout d'une tahe nom : " + task.TaskName, _context);
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+        public bool SupprimerTache(Task task)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.Task.FirstOrDefault(x => x.TaskID == task.TaskID);
+                if (temp != null)
+                {
+                    _context.Task.Remove(temp);
+                    General.SaveContextChanges("suppression de la tache :  " + task.TaskName, _context);
+                    retour = true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return retour;
+        }
+
+
+
+    }
+}

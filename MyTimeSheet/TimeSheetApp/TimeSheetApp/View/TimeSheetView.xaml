@@ -1,0 +1,231 @@
+﻿<UserControl x:Class="TimeSheetApp.Veiw.TimeSheet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TimeSheetApp.Veiw"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+             d:DesignHeight="300" d:DesignWidth="NaN"
+            DataContext="{Binding TimeSheetVeiwModelVm, Source={StaticResource Locator}}"
+>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border  BorderBrush="Gray" BorderThickness="1">
+            <Grid Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <DockPanel Grid.Column="1">
+                    <Button  Command="{Binding AfficherDetailCommand}"  Content="{materialDesign:PackIcon Loupe}"  Style="{DynamicResource ButtonMenu}" ToolTip="Détail"/>
+                    <Button Command="{Binding ActuialiserCommand}" Content="{materialDesign:PackIcon Refresh}"  Style="{DynamicResource ButtonMenu}" ToolTip="Actualiser"/>
+                    <Button Command="{Binding AjouerUnTimeSheetCommand}"  Content="{materialDesign:PackIcon NotePlus}"  Style="{DynamicResource ButtonMenu}" ToolTip="Ajouter" />
+                    <Button Command="{Binding DetacherUnTimeSheetCommand}"  Content="{materialDesign:PackIcon Delete}"  Style="{DynamicResource ButtonMenu}" ToolTip="Détache" />
+                    <Button  Command="{Binding GererTaskUserTimeCommand}"  Content="{materialDesign:PackIcon FormatAlignJustify}"  Style="{DynamicResource ButtonMenu}" ToolTip="Correction heure"/>
+
+                </DockPanel>
+                </Grid>
+        </Border>
+       
+        
+        
+        <Grid Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Margin="0" BorderBrush="Gray">
+                <DockPanel Width="423">
+                    <TextBlock  Height="25"  Margin="15,0,0,0" FontWeight="DemiBold" FontSize="14"  HorizontalAlignment="Left" Foreground="DimGray" Text="Filtre"/>
+                    <TextBox BorderBrush="DimGray" Margin="10,0,0,0" Height="30" BorderThickness="1" Text="{Binding Filtre, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}" Width="300"  >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <command:EventToCommand Command="{Binding  FiltrerCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                    <Button Margin="2,1,0,0" Command="{Binding CancelFiltreCommand}" Padding="0" Height="30" Width="30" Content="{materialDesign:PackIcon Close}" BorderBrush="Gray" Background="DeepSkyBlue"/>
+                    <Button Margin="0,1,0,0" Command="{Binding FiltrerParIntervenantCommand}" Padding="0" Height="30" Width="30" Content="{materialDesign:PackIcon AccountSearch}" BorderBrush="Gray" Background=" DeepSkyBlue" />
+                </DockPanel>
+                
+            </Border>
+            <DockPanel Grid.Column="1">
+                <CheckBox  Margin="20,0" Content="Uniquement mes projets" IsChecked="{Binding IsUniquementMesProjet,Mode=TwoWay}"></CheckBox>
+                <CheckBox  Margin="20,0" Content="Uniquement les TimeSheet clôturés" IsChecked="{Binding IsUniquementTimeSheetCloturEs,Mode=TwoWay}"></CheckBox>
+            </DockPanel>
+        </Grid>
+
+
+
+
+        <Grid Row="2">
+            <Border BorderBrush="Gray" BorderThickness="1">
+                <DataGrid  AlternatingRowBackground="#ebefef" AlternationCount="2"  AutoGenerateColumns="false" ItemsSource="{Binding LstContenu,Mode= TwoWay,UpdateSourceTrigger=Default}" SelectedItem="{Binding Selection, Mode= TwoWay}" IsReadOnly="True" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nom du projet"  Binding="{Binding ProjectName , Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Tache"  Binding="{Binding TaskName , Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Etat"  Binding="{Binding MapTaskStateName , Mode=TwoWay,IsAsync=False}" Width="*"/>
+                        <DataGridTextColumn Header="Date debut"  Binding="{Binding StartTask, StringFormat={}\{0:dd/MM/yyyy HH:mm:ss\}, Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Date fin"  Binding="{Binding EndTask , Mode=TwoWay}"/>
+                        <DataGridTextColumn Header="Durrée effective"  Binding="{Binding ExecutionTime, Mode=TwoWay}" Width="*"/>
+                        <DataGridTextColumn Header="Intervenant"  Binding="{Binding UserName , Mode=TwoWay}" Width="*"/>
+                        <!--ajout des boutons-->
+                        <DataGridTemplateColumn Header="Actions">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Column="0" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.PlayOuPauseCommand, Mode=TwoWay}" Content="{materialDesign:PackIcon Play}" Background="CornflowerBlue" Padding="0" Style="{DynamicResource EnabledRunningPlay}"/>
+                                        <Button Grid.Column="1" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.PlayOuPauseCommand, Mode=TwoWay}" Content="{materialDesign:PackIcon Pause}" Background="CornflowerBlue" Padding="0" Style="{DynamicResource EnabledRunningPause}"/>
+                                        <Button Grid.Column="2" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.StoperCommand, Mode=TwoWay}" Content="{materialDesign:PackIcon Stop}" Background="CornflowerBlue" Padding="0" Style="{DynamicResource EnabledRunningStop}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                
+                    <!--implementation du double click-->
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <command:EventToCommand Command="{Binding AfficherDetailCommand}"  
+                                    CommandParameter="{Binding Selection}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </DataGrid>
+            </Border>
+        </Grid>
+        <Border Grid.Row="3" BorderBrush="Gray">
+            <Label  Content="{Binding NbResult, Mode = TwoWay}"></Label>
+        </Border>
+    </Grid>
+
+    <UserControl.Resources>
+        <Style x:Key="EnabledRunningPlay" TargetType="Button">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Engagé">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En pause">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Terminé">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En attente">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En cours">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En Cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="EnabledRunningPause" TargetType="Button">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Engagé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En pause">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En Pause">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Terminé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En attente">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En Cours">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="EnabledRunningStop" TargetType="Button">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Engagé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En pause">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En Pause">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="Terminé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En attente">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=MapTaskStateName}" Value="En Cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ButtonMenu" TargetType="Button" >
+            <Setter Property="Foreground" Value="Gray" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Width" Value="35"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="BorderBrush" Value="White" ></Setter>
+        </Style>
+
+    </UserControl.Resources>
+</UserControl>
+

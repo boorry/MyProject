@@ -1,0 +1,2202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AuxipressJumboPilotModelStoreContainer" CdmEntityContainer="AuxipressJumboPilotEntities">
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="Addressid" ColumnName="Addressid" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Publisherid" ColumnName="Publisherid" />
+          <ScalarProperty Name="TA_Addresstypeid" ColumnName="TA_Addresstypeid" />
+          <ScalarProperty Name="GE_Customercategoryid" ColumnName="GE_Customercategoryid" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="TI_Contactfunctionid" ColumnName="TI_Contactfunctionid" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PY_Countryid" ColumnName="PY_Countryid" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Articles">
+        <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="Articleid" ColumnName="Articleid" />
+          <ScalarProperty Name="Deliveryid" ColumnName="Deliveryid" />
+          <ScalarProperty Name="ArticleNo" ColumnName="ArticleNo" />
+          <ScalarProperty Name="ArticleTitle" ColumnName="ArticleTitle" />
+          <ScalarProperty Name="ArticleSize" ColumnName="ArticleSize" />
+          <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="SendingDate" ColumnName="SendingDate" />
+          <ScalarProperty Name="Page" ColumnName="Page" />
+          <ScalarProperty Name="TotalPages" ColumnName="TotalPages" />
+          <ScalarProperty Name="ArticleFile" ColumnName="ArticleFile" />
+          <ScalarProperty Name="SS_Status" ColumnName="SS_Status" />
+          <ScalarProperty Name="ForcedAsTest" ColumnName="ForcedAsTest" />
+          <ScalarProperty Name="NextRun" ColumnName="NextRun" />
+          <ScalarProperty Name="DBS_Id" ColumnName="DBS_Id" />
+          <ScalarProperty Name="EvalId" ColumnName="EvalId" />
+          <ScalarProperty Name="MailingDate" ColumnName="MailingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoLog">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.AutoLog">
+        <MappingFragment StoreEntitySet="AutoLog">
+          <ScalarProperty Name="AutoLogID" ColumnName="AutoLogID" />
+          <ScalarProperty Name="logdate" ColumnName="logdate" />
+          <ScalarProperty Name="hostname" ColumnName="hostname" />
+          <ScalarProperty Name="net_library" ColumnName="net_library" />
+          <ScalarProperty Name="net_address" ColumnName="net_address" />
+          <ScalarProperty Name="client_net_address" ColumnName="client_net_address" />
+          <ScalarProperty Name="databefore" ColumnName="databefore" />
+          <ScalarProperty Name="dataafter" ColumnName="dataafter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BADOrdersending">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.BADOrdersending">
+        <MappingFragment StoreEntitySet="BADOrdersending">
+          <ScalarProperty Name="BADOrdersendingid" ColumnName="BADOrdersendingid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calendar">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Calendar">
+        <MappingFragment StoreEntitySet="Calendar">
+          <ScalarProperty Name="Calendarid" ColumnName="Calendarid" />
+          <ScalarProperty Name="CA_Calendartypeid" ColumnName="CA_Calendartypeid" />
+          <ScalarProperty Name="PD_Periodicityid" ColumnName="PD_Periodicityid" />
+          <ScalarProperty Name="Periodicitynumber" ColumnName="Periodicitynumber" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+          <ScalarProperty Name="WD_Weekdayid" ColumnName="WD_Weekdayid" />
+          <ScalarProperty Name="First" ColumnName="First" />
+          <ScalarProperty Name="Second" ColumnName="Second" />
+          <ScalarProperty Name="Third" ColumnName="Third" />
+          <ScalarProperty Name="Fourth" ColumnName="Fourth" />
+          <ScalarProperty Name="Last" ColumnName="Last" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Codespec">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Codespec">
+        <MappingFragment StoreEntitySet="Codespec">
+          <ScalarProperty Name="Codespecid" ColumnName="Codespecid" />
+          <ScalarProperty Name="Codetypeid" ColumnName="Codetypeid" />
+          <ScalarProperty Name="Descriptionfrench" ColumnName="Descriptionfrench" />
+          <ScalarProperty Name="Descriptiondutch" ColumnName="Descriptiondutch" />
+          <ScalarProperty Name="Descriptionenglish" ColumnName="Descriptionenglish" />
+          <ScalarProperty Name="Descriptiongerman" ColumnName="Descriptiongerman" />
+          <ScalarProperty Name="Shortname" ColumnName="Shortname" />
+          <ScalarProperty Name="Inactivedate" ColumnName="Inactivedate" />
+          <ScalarProperty Name="Groupable" ColumnName="Groupable" />
+          <ScalarProperty Name="Mappingnewbase" ColumnName="Mappingnewbase" />
+          <ScalarProperty Name="Mappinglotusnotes" ColumnName="Mappinglotusnotes" />
+          <ScalarProperty Name="Mappingccs" ColumnName="Mappingccs" />
+          <ScalarProperty Name="TS_Targetsystemid" ColumnName="TS_Targetsystemid" />
+          <ScalarProperty Name="EU" ColumnName="EU" />
+          <ScalarProperty Name="Codeorder" ColumnName="Codeorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Codetype">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Codetype">
+        <MappingFragment StoreEntitySet="Codetype">
+          <ScalarProperty Name="Codetypeid" ColumnName="Codetypeid" />
+          <ScalarProperty Name="Descriptionfrench" ColumnName="Descriptionfrench" />
+          <ScalarProperty Name="Descriptiondutch" ColumnName="Descriptiondutch" />
+          <ScalarProperty Name="Descriptionenglish" ColumnName="Descriptionenglish" />
+          <ScalarProperty Name="Descriptiongerman" ColumnName="Descriptiongerman" />
+          <ScalarProperty Name="Inactivedate" ColumnName="Inactivedate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="TC_Customertypeid" ColumnName="TC_Customertypeid" />
+          <ScalarProperty Name="CO_Accountmanagerid" ColumnName="CO_Accountmanagerid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="VATnumber" ColumnName="VATnumber" />
+          <ScalarProperty Name="TV_VATcodeid" ColumnName="TV_VATcodeid" />
+          <ScalarProperty Name="CD_Paymenttypeid" ColumnName="CD_Paymenttypeid" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Numbersupplinvoice" ColumnName="Numbersupplinvoice" />
+          <ScalarProperty Name="OB_Invoicetextid" ColumnName="OB_Invoicetextid" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Delivery">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Delivery">
+        <MappingFragment StoreEntitySet="Delivery">
+          <ScalarProperty Name="Deliveryid" ColumnName="Deliveryid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Deliveryname" ColumnName="Deliveryname" />
+          <ScalarProperty Name="SM_SendingMode" ColumnName="SM_SendingMode" />
+          <ScalarProperty Name="SenderID" ColumnName="SenderID" />
+          <ScalarProperty Name="SA_SendingAs" ColumnName="SA_SendingAs" />
+          <ScalarProperty Name="AT_Attachment" ColumnName="AT_Attachment" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailTest" ColumnName="EmailTest" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="SentAsTest" ColumnName="SentAsTest" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="PressReview" ColumnName="PressReview" />
+          <ScalarProperty Name="PRName" ColumnName="PRName" />
+          <ScalarProperty Name="CV_CoverPage" ColumnName="CV_CoverPage" />
+          <ScalarProperty Name="PROrderBySubject" ColumnName="PROrderBySubject" />
+          <ScalarProperty Name="PRDefaultSubjectName" ColumnName="PRDefaultSubjectName" />
+          <ScalarProperty Name="CL_Calendar" ColumnName="CL_Calendar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deliverysubject">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Deliverysubject">
+        <MappingFragment StoreEntitySet="Deliverysubject">
+          <ScalarProperty Name="Deliverysubjectid" ColumnName="Deliverysubjectid" />
+          <ScalarProperty Name="Deliveryid" ColumnName="Deliveryid" />
+          <ScalarProperty Name="DBS_Id" ColumnName="DBS_Id" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EfficyContact">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.EfficyContact">
+        <MappingFragment StoreEntitySet="EfficyContact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EfficyProduct">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.EfficyProduct">
+        <MappingFragment StoreEntitySet="EfficyProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DocuProdID" ColumnName="DocuProdID" />
+          <ScalarProperty Name="OrderSendingID" ColumnName="OrderSendingID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilesendTemplate">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.FilesendTemplate">
+        <MappingFragment StoreEntitySet="FilesendTemplate">
+          <ScalarProperty Name="FilesendTemplateid" ColumnName="FilesendTemplateid" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Passivemode" ColumnName="Passivemode" />
+          <ScalarProperty Name="Delayed" ColumnName="Delayed" />
+          <ScalarProperty Name="DelayedHour" ColumnName="DelayedHour" />
+          <ScalarProperty Name="Sendxml" ColumnName="Sendxml" />
+          <ScalarProperty Name="Sendpdf" ColumnName="Sendpdf" />
+          <ScalarProperty Name="Sendemptyfile" ColumnName="Sendemptyfile" />
+          <ScalarProperty Name="Emptyfilename" ColumnName="Emptyfilename" />
+          <ScalarProperty Name="XMLtemplateid" ColumnName="XMLtemplateid" />
+          <ScalarProperty Name="Compression" ColumnName="Compression" />
+          <ScalarProperty Name="Deliverymethod" ColumnName="Deliverymethod" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historystatistics">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Historystatistics">
+        <MappingFragment StoreEntitySet="Historystatistics">
+          <ScalarProperty Name="Historystatisticsid" ColumnName="Historystatisticsid" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Statisticsdate" ColumnName="Statisticsdate" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+          <ScalarProperty Name="Audience" ColumnName="Audience" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holiday">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Holiday">
+        <MappingFragment StoreEntitySet="Holiday">
+          <ScalarProperty Name="Holidayid" ColumnName="Holidayid" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="IT_Invoicetypeid" ColumnName="IT_Invoicetypeid" />
+          <ScalarProperty Name="Invoicedate" ColumnName="Invoicedate" />
+          <ScalarProperty Name="Invoicenumber" ColumnName="Invoicenumber" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Customerreference" ColumnName="Customerreference" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="Communication" ColumnName="Communication" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailCustomer" ColumnName="EmailCustomer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoicedetail">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Invoicedetail">
+        <MappingFragment StoreEntitySet="Invoicedetail">
+          <ScalarProperty Name="Invoicedetailid" ColumnName="Invoicedetailid" />
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="DT_Invoicedetailtypeid" ColumnName="DT_Invoicedetailtypeid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Variableprice" ColumnName="Variableprice" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Renewdate" ColumnName="Renewdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Extracostdescription" ColumnName="Extracostdescription" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoicedetailsending">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Invoicedetailsending">
+        <MappingFragment StoreEntitySet="Invoicedetailsending">
+          <ScalarProperty Name="Invoicedetailsendingid" ColumnName="Invoicedetailsendingid" />
+          <ScalarProperty Name="Invoicedetailid" ColumnName="Invoicedetailid" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Keyword">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Keyword">
+        <MappingFragment StoreEntitySet="Keyword">
+          <ScalarProperty Name="KeywordID" ColumnName="KeywordID" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="KeywordString" ColumnName="KeywordString" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="KT_Typeid" ColumnName="KT_Typeid" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeywordCondition">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.KeywordCondition">
+        <MappingFragment StoreEntitySet="KeywordCondition">
+          <ScalarProperty Name="KeywordConditionID" ColumnName="KeywordConditionID" />
+          <ScalarProperty Name="KeywordLineID" ColumnName="KeywordLineID" />
+          <ScalarProperty Name="KC_ConditionTypeid" ColumnName="KC_ConditionTypeid" />
+          <ScalarProperty Name="KeywordConditionName" ColumnName="KeywordConditionName" />
+          <ScalarProperty Name="NbOfWords" ColumnName="NbOfWords" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeywordGroup">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.KeywordGroup">
+        <MappingFragment StoreEntitySet="KeywordGroup">
+          <ScalarProperty Name="KeywordGroupID" ColumnName="KeywordGroupID" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+          <ScalarProperty Name="KT_Typeid" ColumnName="KT_Typeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeywordLine">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.KeywordLine">
+        <MappingFragment StoreEntitySet="KeywordLine">
+          <ScalarProperty Name="KeywordLineID" ColumnName="KeywordLineID" />
+          <ScalarProperty Name="KeywordGroupID" ColumnName="KeywordGroupID" />
+          <ScalarProperty Name="KeywordName" ColumnName="KeywordName" />
+          <ScalarProperty Name="KeywordInclude" ColumnName="KeywordInclude" />
+          <ScalarProperty Name="ListOrder" ColumnName="ListOrder" />
+          <ScalarProperty Name="KeywordAllKeywords" ColumnName="KeywordAllKeywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logdata">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Logdata">
+        <MappingFragment StoreEntitySet="Logdata">
+          <ScalarProperty Name="Logdataid" ColumnName="Logdataid" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Databefore" ColumnName="Databefore" />
+          <ScalarProperty Name="Dataafter" ColumnName="Dataafter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapXMLtemplate">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.MapXMLtemplate">
+        <MappingFragment StoreEntitySet="MapXMLtemplate">
+          <ScalarProperty Name="MapXMLtemplateid" ColumnName="MapXMLtemplateid" />
+          <ScalarProperty Name="Templatename" ColumnName="Templatename" />
+          <ScalarProperty Name="Templatefile" ColumnName="Templatefile" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaFigureAll">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.MediaFigureAll">
+        <MappingFragment StoreEntitySet="MediaFigureAll">
+          <ScalarProperty Name="MediaFigureAllID" ColumnName="MediaFigureAllID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="JumbopilotID" ColumnName="JumbopilotID" />
+          <ScalarProperty Name="MediascoreID" ColumnName="MediascoreID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="MapWeekdayUK" ColumnName="MapWeekdayUK" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Total_Audience" ColumnName="Total-Audience" />
+          <ScalarProperty Name="C04_Audience" ColumnName="04-Audience" />
+          <ScalarProperty Name="C04_Percentage" ColumnName="04-Percentage" />
+          <ScalarProperty Name="C12_Audience" ColumnName="12-Audience" />
+          <ScalarProperty Name="C12_Percentage" ColumnName="12-Percentage" />
+          <ScalarProperty Name="Ho12_Audience" ColumnName="Ho12-Audience" />
+          <ScalarProperty Name="Ho12_Percentage" ColumnName="Ho12-Percentage" />
+          <ScalarProperty Name="Fe12_Audience" ColumnName="Fe12-Audience" />
+          <ScalarProperty Name="Fe12_Percentage" ColumnName="Fe12-Percentage" />
+          <ScalarProperty Name="C12SG1_2_Audience" ColumnName="12SG1-2-Audience" />
+          <ScalarProperty Name="C12SG1_2_Percentage" ColumnName="12SG1-2-Percentage" />
+          <ScalarProperty Name="C12SG3_4_Audience" ColumnName="12SG3-4-Audience" />
+          <ScalarProperty Name="C12SG3_4_Percentage" ColumnName="12SG3-4-Percentage" />
+          <ScalarProperty Name="C12SG5_6_Audience" ColumnName="12SG5-6-Audience" />
+          <ScalarProperty Name="C12SG5_6_Percentage" ColumnName="12SG5-6-Percentage" />
+          <ScalarProperty Name="C12SG7_8_Audience" ColumnName="12SG7-8-Audience" />
+          <ScalarProperty Name="C12SG7_8_Percentage" ColumnName="12SG7-8-Percentage" />
+          <ScalarProperty Name="C12_34_Audience" ColumnName="12-34-Audience" />
+          <ScalarProperty Name="C12_34_Percentage" ColumnName="12-34-Percentage" />
+          <ScalarProperty Name="C35_54_Audience" ColumnName="35-54-Audience" />
+          <ScalarProperty Name="C35_54_Percentage" ColumnName="35-54-Percentage" />
+          <ScalarProperty Name="C55_Audience" ColumnName="55-Audience" />
+          <ScalarProperty Name="C55_Percentage" ColumnName="55-Percentage" />
+          <ScalarProperty Name="C15_Audience" ColumnName="15-Audience" />
+          <ScalarProperty Name="C15_Percentage" ColumnName="15-Percentage" />
+          <ScalarProperty Name="C18_44_Audience" ColumnName="18-44-Audience" />
+          <ScalarProperty Name="C18_44_Percentage" ColumnName="18-44-Percentage" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FrmtLength" ColumnName="FrmtLength" />
+          <ScalarProperty Name="FrmtWidth" ColumnName="FrmtWidth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Ordertext" ColumnName="Ordertext" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Shippingblocked" ColumnName="Shippingblocked" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="OB_Invoicetextid" ColumnName="OB_Invoicetextid" />
+          <ScalarProperty Name="Groupnumber" ColumnName="Groupnumber" />
+          <ScalarProperty Name="Groupdeliverynumber" ColumnName="Groupdeliverynumber" />
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="Internal" ColumnName="Internal" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Customernotification" ColumnName="Customernotification" />
+          <ScalarProperty Name="Missinglogo" ColumnName="Missinglogo" />
+          <ScalarProperty Name="UIProjectID" ColumnName="UIProjectID" />
+          <ScalarProperty Name="KeywordRTVTitle" ColumnName="KeywordRTVTitle" />
+          <ScalarProperty Name="EmailCustomer" ColumnName="EmailCustomer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderFileMove">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.OrderFileMove">
+        <MappingFragment StoreEntitySet="OrderFileMove">
+          <ScalarProperty Name="OrderFileMoveID" ColumnName="OrderFileMoveID" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="DirIn" ColumnName="DirIn" />
+          <ScalarProperty Name="DirOut" ColumnName="DirOut" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderfilesend">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Orderfilesend">
+        <MappingFragment StoreEntitySet="Orderfilesend">
+          <ScalarProperty Name="Orderfilesendid" ColumnName="Orderfilesendid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Passivemode" ColumnName="Passivemode" />
+          <ScalarProperty Name="Delayed" ColumnName="Delayed" />
+          <ScalarProperty Name="DelayedHour" ColumnName="DelayedHour" />
+          <ScalarProperty Name="Sendxml" ColumnName="Sendxml" />
+          <ScalarProperty Name="Sendpdf" ColumnName="Sendpdf" />
+          <ScalarProperty Name="Sendemptyfile" ColumnName="Sendemptyfile" />
+          <ScalarProperty Name="Emptyfilename" ColumnName="Emptyfilename" />
+          <ScalarProperty Name="XMLtemplateid" ColumnName="XMLtemplateid" />
+          <ScalarProperty Name="Compression" ColumnName="Compression" />
+          <ScalarProperty Name="Deliverymethod" ColumnName="Deliverymethod" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Sendseq" ColumnName="Sendseq" />
+          <ScalarProperty Name="SendJPG" ColumnName="SendJPG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderIdAsText">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.OrderIdAsText">
+        <MappingFragment StoreEntitySet="OrderIdAsText">
+          <ScalarProperty Name="OrderIdAsTextId" ColumnName="OrderIdAsTextId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderIdAsText1" ColumnName="OrderIdAsText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderlink">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Orderlink">
+        <MappingFragment StoreEntitySet="Orderlink">
+          <ScalarProperty Name="Orderlinkid" ColumnName="Orderlinkid" />
+          <ScalarProperty Name="OrderidParent" ColumnName="OrderidParent" />
+          <ScalarProperty Name="OrderidChild" ColumnName="OrderidChild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordersending">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Ordersending">
+        <MappingFragment StoreEntitySet="Ordersending">
+          <ScalarProperty Name="Ordersendingid" ColumnName="Ordersendingid" />
+          <ScalarProperty Name="Ordersubscriptionid" ColumnName="Ordersubscriptionid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+          <ScalarProperty Name="Addressid" ColumnName="Addressid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordersendingschedule">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Ordersendingschedule">
+        <MappingFragment StoreEntitySet="Ordersendingschedule">
+          <ScalarProperty Name="Ordersendingscheduleid" ColumnName="Ordersendingscheduleid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordersubscription">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Ordersubscription">
+        <MappingFragment StoreEntitySet="Ordersubscription">
+          <ScalarProperty Name="Ordersubscriptionid" ColumnName="Ordersubscriptionid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Renewdate" ColumnName="Renewdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="TR_Tariffplanid" ColumnName="TR_Tariffplanid" />
+          <ScalarProperty Name="Subscriptioninvoiced" ColumnName="Subscriptioninvoiced" />
+          <ScalarProperty Name="Nextinvoicedate" ColumnName="Nextinvoicedate" />
+          <ScalarProperty Name="OverruleOrderschedule" ColumnName="OverruleOrderschedule" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="AL_Accesslevel" ColumnName="AL_Accesslevel" />
+          <ScalarProperty Name="Inclusive" ColumnName="Inclusive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordersubscriptionschedule">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Ordersubscriptionschedule">
+        <MappingFragment StoreEntitySet="Ordersubscriptionschedule">
+          <ScalarProperty Name="Ordersubscriptionscheduleid" ColumnName="Ordersubscriptionscheduleid" />
+          <ScalarProperty Name="Ordersubscriptionid" ColumnName="Ordersubscriptionid" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordertotal">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Ordertotal">
+        <MappingFragment StoreEntitySet="Ordertotal">
+          <ScalarProperty Name="Ordertotalid" ColumnName="Ordertotalid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="PU_Publicationperiodicity" ColumnName="PU_Publicationperiodicity" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Articles" ColumnName="Articles" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Owner">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Owner">
+        <MappingFragment StoreEntitySet="Owner">
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="Ownernumber" ColumnName="Ownernumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Period">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Period">
+        <MappingFragment StoreEntitySet="Period">
+          <ScalarProperty Name="Periodid" ColumnName="Periodid" />
+          <ScalarProperty Name="Calendarid" ColumnName="Calendarid" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Planning">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Planning">
+        <MappingFragment StoreEntitySet="Planning">
+          <ScalarProperty Name="Planningid" ColumnName="Planningid" />
+          <ScalarProperty Name="Deliveryid" ColumnName="Deliveryid" />
+          <ScalarProperty Name="CLDay" ColumnName="CLDay" />
+          <ScalarProperty Name="WD_Weekday" ColumnName="WD_Weekday" />
+          <ScalarProperty Name="Fixedhours" ColumnName="Fixedhours" />
+          <ScalarProperty Name="Listhours" ColumnName="Listhours" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NextRun" ColumnName="NextRun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Postalcode">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Postalcode">
+        <MappingFragment StoreEntitySet="Postalcode">
+          <ScalarProperty Name="Postalcodeid" ColumnName="Postalcodeid" />
+          <ScalarProperty Name="Postalcode1" ColumnName="Postalcode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Parentpostalcodeid" ColumnName="Parentpostalcodeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PressReviewLabel">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.PressReviewLabel">
+        <MappingFragment StoreEntitySet="PressReviewLabel">
+          <ScalarProperty Name="LabelID" ColumnName="LabelID" />
+          <ScalarProperty Name="PressReview" ColumnName="PressReview" />
+          <ScalarProperty Name="TOC" ColumnName="TOC" />
+          <ScalarProperty Name="Page" ColumnName="Page" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Production">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Production">
+        <MappingFragment StoreEntitySet="Production">
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="Exchangeid" ColumnName="Exchangeid" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Exchangedate" ColumnName="Exchangedate" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Cutdate" ColumnName="Cutdate" />
+          <ScalarProperty Name="Scandate" ColumnName="Scandate" />
+          <ScalarProperty Name="Usernamereader" ColumnName="Usernamereader" />
+          <ScalarProperty Name="Usernamecutter" ColumnName="Usernamecutter" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Numberofpages" ColumnName="Numberofpages" />
+          <ScalarProperty Name="Numberofsendings" ColumnName="Numberofsendings" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="Statementprinted" ColumnName="Statementprinted" />
+          <ScalarProperty Name="PubList" ColumnName="PubList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productionflyers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Productionflyers">
+        <MappingFragment StoreEntitySet="Productionflyers">
+          <ScalarProperty Name="Productionflyersid" ColumnName="Productionflyersid" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Productiondate" ColumnName="Productiondate" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Articletitle" ColumnName="Articletitle" />
+          <ScalarProperty Name="Articlepagenumber" ColumnName="Articlepagenumber" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Picturename" ColumnName="Picturename" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Articleno" ColumnName="Articleno" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="AVE" ColumnName="AVE" />
+          <ScalarProperty Name="ArticleLanguage" ColumnName="ArticleLanguage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productionsending">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Productionsending">
+        <MappingFragment StoreEntitySet="Productionsending">
+          <ScalarProperty Name="Productionsendingid" ColumnName="Productionsendingid" />
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productionsendingtill20150101">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Productionsendingtill20150101">
+        <MappingFragment StoreEntitySet="Productionsendingtill20150101">
+          <ScalarProperty Name="Productionsendingid" ColumnName="Productionsendingid" />
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productiontill20150101">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Productiontill20150101">
+        <MappingFragment StoreEntitySet="Productiontill20150101">
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="Exchangeid" ColumnName="Exchangeid" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Exchangedate" ColumnName="Exchangedate" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Cutdate" ColumnName="Cutdate" />
+          <ScalarProperty Name="Scandate" ColumnName="Scandate" />
+          <ScalarProperty Name="Usernamereader" ColumnName="Usernamereader" />
+          <ScalarProperty Name="Usernamecutter" ColumnName="Usernamecutter" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Numberofpages" ColumnName="Numberofpages" />
+          <ScalarProperty Name="Numberofsendings" ColumnName="Numberofsendings" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="Statementprinted" ColumnName="Statementprinted" />
+          <ScalarProperty Name="PubList" ColumnName="PubList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductionToExport">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ProductionToExport">
+        <MappingFragment StoreEntitySet="ProductionToExport">
+          <ScalarProperty Name="ProductionToExportID" ColumnName="ProductionToExportID" />
+          <ScalarProperty Name="Productionflyersid" ColumnName="Productionflyersid" />
+          <ScalarProperty Name="ArticleUrl" ColumnName="ArticleUrl" />
+          <ScalarProperty Name="ThumbnailUrl" ColumnName="ThumbnailUrl" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ToExport" ColumnName="ToExport" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="UIProjectID" ColumnName="UIProjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producttypegroup">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Producttypegroup">
+        <MappingFragment StoreEntitySet="Producttypegroup">
+          <ScalarProperty Name="Producttypegroupid" ColumnName="Producttypegroupid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publication">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Publication">
+        <MappingFragment StoreEntitySet="Publication">
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="Parentpublicationid" ColumnName="Parentpublicationid" />
+          <ScalarProperty Name="PU_Publicationperiodicityid" ColumnName="PU_Publicationperiodicityid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ME_Mediatypeid" ColumnName="ME_Mediatypeid" />
+          <ScalarProperty Name="Receivedcopies" ColumnName="Receivedcopies" />
+          <ScalarProperty Name="Publisherid" ColumnName="Publisherid" />
+          <ScalarProperty Name="FO_Formatid" ColumnName="FO_Formatid" />
+          <ScalarProperty Name="Pages" ColumnName="Pages" />
+          <ScalarProperty Name="Morninginfo" ColumnName="Morninginfo" />
+          <ScalarProperty Name="CP_Categoryid" ColumnName="CP_Categoryid" />
+          <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+          <ScalarProperty Name="CF_Invoicecategoryid" ColumnName="CF_Invoicecategoryid" />
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="Digitalrights" ColumnName="Digitalrights" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="PY_Countryid" ColumnName="PY_Countryid" />
+          <ScalarProperty Name="CA_Calendartypeid" ColumnName="CA_Calendartypeid" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="MissingLogo" ColumnName="MissingLogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publicationgroup">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Publicationgroup">
+        <MappingFragment StoreEntitySet="Publicationgroup">
+          <ScalarProperty Name="Publicationgroupid" ColumnName="Publicationgroupid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publisher">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Publisher">
+        <MappingFragment StoreEntitySet="Publisher">
+          <ScalarProperty Name="Publisherid" ColumnName="Publisherid" />
+          <ScalarProperty Name="Publishername" ColumnName="Publishername" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Royalty">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Royalty">
+        <MappingFragment StoreEntitySet="Royalty">
+          <ScalarProperty Name="Royaltyid" ColumnName="Royaltyid" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Auxipressroyalty" ColumnName="Auxipressroyalty" />
+          <ScalarProperty Name="Customerroyalty" ColumnName="Customerroyalty" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Section">
+        <MappingFragment StoreEntitySet="Section">
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="SectionOrder" ColumnName="SectionOrder" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sendingprice">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Sendingprice">
+        <MappingFragment StoreEntitySet="Sendingprice">
+          <ScalarProperty Name="Sendingpriceid" ColumnName="Sendingpriceid" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+          <ScalarProperty Name="Percentagecostpost" ColumnName="Percentagecostpost" />
+          <ScalarProperty Name="Sendingtext" ColumnName="Sendingtext" />
+          <ScalarProperty Name="Fixedprice" ColumnName="Fixedprice" />
+          <ScalarProperty Name="Pageprice" ColumnName="Pageprice" />
+          <ScalarProperty Name="Emailprice" ColumnName="Emailprice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaArticle">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.SocialMediaArticle">
+        <MappingFragment StoreEntitySet="SocialMediaArticle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="QueryRelevance" ColumnName="QueryRelevance" />
+          <ScalarProperty Name="TopicFilter" ColumnName="TopicFilter" />
+          <ScalarProperty Name="PublishedTime" ColumnName="PublishedTime" />
+          <ScalarProperty Name="IndexedTime" ColumnName="IndexedTime" />
+          <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Snippet" ColumnName="Snippet" />
+          <ScalarProperty Name="HasImage" ColumnName="HasImage" />
+          <ScalarProperty Name="Sentiment" ColumnName="Sentiment" />
+          <ScalarProperty Name="Important" ColumnName="Important" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="CommentsCount" ColumnName="CommentsCount" />
+          <ScalarProperty Name="ViewsCount" ColumnName="ViewsCount" />
+          <ScalarProperty Name="TweetsCount" ColumnName="TweetsCount" />
+          <ScalarProperty Name="FacebookSharesCount" ColumnName="FacebookSharesCount" />
+          <ScalarProperty Name="FacebookLikesCount" ColumnName="FacebookLikesCount" />
+          <ScalarProperty Name="SourceDomain" ColumnName="SourceDomain" />
+          <ScalarProperty Name="SourceHost" ColumnName="SourceHost" />
+          <ScalarProperty Name="SourceCountry" ColumnName="SourceCountry" />
+          <ScalarProperty Name="SourceStars" ColumnName="SourceStars" />
+          <ScalarProperty Name="SourceFavorite" ColumnName="SourceFavorite" />
+          <ScalarProperty Name="SourceRank" ColumnName="SourceRank" />
+          <ScalarProperty Name="SourceArticlesCount" ColumnName="SourceArticlesCount" />
+          <ScalarProperty Name="SourceViewsCount" ColumnName="SourceViewsCount" />
+          <ScalarProperty Name="SourceTweetsCount" ColumnName="SourceTweetsCount" />
+          <ScalarProperty Name="SourceTwitterFollowersCount" ColumnName="SourceTwitterFollowersCount" />
+          <ScalarProperty Name="SourceFacebookSharesCount" ColumnName="SourceFacebookSharesCount" />
+          <ScalarProperty Name="SourceFacebookLikesCount" ColumnName="SourceFacebookLikesCount" />
+          <ScalarProperty Name="SourceFacebookFriendsCount" ColumnName="SourceFacebookFriendsCount" />
+          <ScalarProperty Name="SentToCustomer" ColumnName="SentToCustomer" />
+          <ScalarProperty Name="Exported" ColumnName="Exported" />
+          <ScalarProperty Name="ImportTime" ColumnName="ImportTime" />
+          <ScalarProperty Name="Reach" ColumnName="Reach" />
+          <ScalarProperty Name="AuthorCountry" ColumnName="AuthorCountry" />
+          <ScalarProperty Name="AuthorGender" ColumnName="AuthorGender" />
+          <ScalarProperty Name="SourceFacebookFollowers" ColumnName="SourceFacebookFollowers" />
+          <ScalarProperty Name="ArticleTwitterRetweets" ColumnName="ArticleTwitterRetweets" />
+          <ScalarProperty Name="Engagement" ColumnName="Engagement" />
+          <ScalarProperty Name="AuthorImage" ColumnName="AuthorImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaReport">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.SocialMediaReport">
+        <MappingFragment StoreEntitySet="SocialMediaReport">
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportPath" ColumnName="ReportPath" />
+          <ScalarProperty Name="PhysicalPath" ColumnName="PhysicalPath" />
+          <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaReportType">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.SocialMediaReportType">
+        <MappingFragment StoreEntitySet="SocialMediaReportType">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaTempOrder">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.SocialMediaTempOrder">
+        <MappingFragment StoreEntitySet="SocialMediaTempOrder">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaType">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.SocialMediaType">
+        <MappingFragment StoreEntitySet="SocialMediaType">
+          <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+          <ScalarProperty Name="PublicationId" ColumnName="PublicationId" />
+          <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+          <ScalarProperty Name="MapMediaTypeID" ColumnName="MapMediaTypeID" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscription">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Subscription">
+        <MappingFragment StoreEntitySet="Subscription">
+          <ScalarProperty Name="Subscriptionid" ColumnName="Subscriptionid" />
+          <ScalarProperty Name="Subscriptionname" ColumnName="Subscriptionname" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cancelmail" ColumnName="Cancelmail" />
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="Renewdate" ColumnName="Renewdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="msrepl_tran_version" ColumnName="msrepl_tran_version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Systemparameter">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Systemparameter">
+        <MappingFragment StoreEntitySet="Systemparameter">
+          <ScalarProperty Name="Parametername" ColumnName="Parametername" />
+          <ScalarProperty Name="Parametervalue" ColumnName="Parametervalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tariff">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Tariff">
+        <MappingFragment StoreEntitySet="Tariff">
+          <ScalarProperty Name="Tariffid" ColumnName="Tariffid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Variable" ColumnName="Variable" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="TR_Tariffplanid" ColumnName="TR_Tariffplanid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempNewID">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.TempNewID">
+        <MappingFragment StoreEntitySet="TempNewID">
+          <ScalarProperty Name="newid" ColumnName="newid" />
+          <ScalarProperty Name="newdate" ColumnName="newdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_AEXCLURE">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.TP_AEXCLURE">
+        <MappingFragment StoreEntitySet="TP_AEXCLURE">
+          <ScalarProperty Name="TP" ColumnName="TP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Logonid" ColumnName="Logonid" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="UP_Userprofileid" ColumnName="UP_Userprofileid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userlogonhistory">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Userlogonhistory">
+        <MappingFragment StoreEntitySet="Userlogonhistory">
+          <ScalarProperty Name="Userlogonhistoryid" ColumnName="Userlogonhistoryid" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Logondate" ColumnName="Logondate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userorder">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Userorder">
+        <MappingFragment StoreEntitySet="Userorder">
+          <ScalarProperty Name="Userorderid" ColumnName="Userorderid" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AP_EncMan">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.AP_EncMan">
+        <MappingFragment StoreEntitySet="AP_EncMan">
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Abo" ColumnName="Abo" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="Produit" ColumnName="Produit" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Numberofpages" ColumnName="Numberofpages" />
+          <ScalarProperty Name="Envoi" ColumnName="Envoi" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+          <ScalarProperty Name="Reader" ColumnName="Reader" />
+          <ScalarProperty Name="EncodingType" ColumnName="EncodingType" />
+          <ScalarProperty Name="Encoder" ColumnName="Encoder" />
+          <ScalarProperty Name="Artno" ColumnName="Artno" />
+          <ScalarProperty Name="multiplier" ColumnName="multiplier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AP_Retours">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.AP_Retours">
+        <MappingFragment StoreEntitySet="AP_Retours">
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="Numberofpages" ColumnName="Numberofpages" />
+          <ScalarProperty Name="TE_Sendingtypeid" ColumnName="TE_Sendingtypeid" />
+          <ScalarProperty Name="Reader" ColumnName="Reader" />
+          <ScalarProperty Name="EncodingType" ColumnName="EncodingType" />
+          <ScalarProperty Name="Encoder" ColumnName="Encoder" />
+          <ScalarProperty Name="Artno" ColumnName="Artno" />
+          <ScalarProperty Name="EncodingDate" ColumnName="EncodingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExportToNewbase">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ExportToNewbase">
+        <MappingFragment StoreEntitySet="ExportToNewbase">
+          <ScalarProperty Name="ExportToNewbaseID" ColumnName="ExportToNewbaseID" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="FromID" ColumnName="FromID" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filtre_Pays">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Filtre_Pays">
+        <MappingFragment StoreEntitySet="Filtre_Pays">
+          <ScalarProperty Name="codespecid" ColumnName="codespecid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoicenumber">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Invoicenumber">
+        <MappingFragment StoreEntitySet="Invoicenumber">
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="IT_Invoicetypeid" ColumnName="IT_Invoicetypeid" />
+          <ScalarProperty Name="Invoicenumber1" ColumnName="Invoicenumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderfilesend2">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Orderfilesend2">
+        <MappingFragment StoreEntitySet="Orderfilesend2">
+          <ScalarProperty Name="Orderfilesendid" ColumnName="Orderfilesendid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Passivemode" ColumnName="Passivemode" />
+          <ScalarProperty Name="Delayed" ColumnName="Delayed" />
+          <ScalarProperty Name="DelayedHour" ColumnName="DelayedHour" />
+          <ScalarProperty Name="Sendxml" ColumnName="Sendxml" />
+          <ScalarProperty Name="Sendpdf" ColumnName="Sendpdf" />
+          <ScalarProperty Name="Sendemptyfile" ColumnName="Sendemptyfile" />
+          <ScalarProperty Name="Emptyfilename" ColumnName="Emptyfilename" />
+          <ScalarProperty Name="XMLtemplateid" ColumnName="XMLtemplateid" />
+          <ScalarProperty Name="Compression" ColumnName="Compression" />
+          <ScalarProperty Name="Deliverymethod" ColumnName="Deliverymethod" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="AuxipressJumboPilotModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Orderaddress" TypeName="AuxipressJumboPilotModel.Orderaddress" StoreEntitySet="Orderaddress">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="Addressid" ColumnName="Addressid" />
+      </EndProperty>
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OrderSocialMediaReport" TypeName="AuxipressJumboPilotModel.OrderSocialMediaReport" StoreEntitySet="OrderSocialMediaReport">
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Orderid" ColumnName="OrderID" />
+      </EndProperty>
+      <EndProperty Name="SocialMediaReport">
+        <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Publicationinpublicationgroup" TypeName="AuxipressJumboPilotModel.Publicationinpublicationgroup" StoreEntitySet="Publicationinpublicationgroup">
+      <EndProperty Name="Publication">
+        <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+      </EndProperty>
+      <EndProperty Name="Publicationgroup">
+        <ScalarProperty Name="Publicationgroupid" ColumnName="Publicationgroupid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Publicationlanguage" TypeName="AuxipressJumboPilotModel.Publicationlanguage" StoreEntitySet="Publicationlanguage">
+      <EndProperty Name="Codespec">
+        <ScalarProperty Name="Codespecid" ColumnName="LA_Languageid" />
+      </EndProperty>
+      <EndProperty Name="Publication">
+        <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Subscriptionaddress" TypeName="AuxipressJumboPilotModel.Subscriptionaddress" StoreEntitySet="Subscriptionaddress">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="Addressid" ColumnName="Addressid" />
+      </EndProperty>
+      <EndProperty Name="Subscription">
+        <ScalarProperty Name="Subscriptionid" ColumnName="Subscriptionid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="APVContact">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVContact">
+        <MappingFragment StoreEntitySet="APVContact">
+          <ScalarProperty Name="PresentInJP" ColumnName="PresentInJP" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVContactMedia">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVContactMedia">
+        <MappingFragment StoreEntitySet="APVContactMedia">
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="MapCountryID" ColumnName="MapCountryID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ContactMediaID" ColumnName="ContactMediaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVContactSubject">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVContactSubject">
+        <MappingFragment StoreEntitySet="APVContactSubject">
+          <ScalarProperty Name="DescGerman" ColumnName="DescGerman" />
+          <ScalarProperty Name="DescEnglish" ColumnName="DescEnglish" />
+          <ScalarProperty Name="DescDutch" ColumnName="DescDutch" />
+          <ScalarProperty Name="DescFrench" ColumnName="DescFrench" />
+          <ScalarProperty Name="MapSubjectID" ColumnName="MapSubjectID" />
+          <ScalarProperty Name="ContactMediaID" ColumnName="ContactMediaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVJournalistDetail">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVJournalistDetail">
+        <MappingFragment StoreEntitySet="APVJournalistDetail">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="MapSubjectDE" ColumnName="MapSubjectDE" />
+          <ScalarProperty Name="MapSubjectEN" ColumnName="MapSubjectEN" />
+          <ScalarProperty Name="MapSubjectNL" ColumnName="MapSubjectNL" />
+          <ScalarProperty Name="MapSubjectFR" ColumnName="MapSubjectFR" />
+          <ScalarProperty Name="Titre" ColumnName="Titre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMapCountry">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMapCountry">
+        <MappingFragment StoreEntitySet="APVMapCountry">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DescGerman" ColumnName="DescGerman" />
+          <ScalarProperty Name="DescEnglish" ColumnName="DescEnglish" />
+          <ScalarProperty Name="DescDutch" ColumnName="DescDutch" />
+          <ScalarProperty Name="DescFrench" ColumnName="DescFrench" />
+          <ScalarProperty Name="MapCountryID" ColumnName="MapCountryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMapLanguage">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMapLanguage">
+        <MappingFragment StoreEntitySet="APVMapLanguage">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DescGerman" ColumnName="DescGerman" />
+          <ScalarProperty Name="DescEnglish" ColumnName="DescEnglish" />
+          <ScalarProperty Name="DescDutch" ColumnName="DescDutch" />
+          <ScalarProperty Name="DescFrench" ColumnName="DescFrench" />
+          <ScalarProperty Name="MapLanguageID" ColumnName="MapLanguageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMedia">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMedia">
+        <MappingFragment StoreEntitySet="APVMedia">
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Tirage" ColumnName="Tirage" />
+          <ScalarProperty Name="MapLanguageDE" ColumnName="MapLanguageDE" />
+          <ScalarProperty Name="MapLanguageEN" ColumnName="MapLanguageEN" />
+          <ScalarProperty Name="MapLanguageNL" ColumnName="MapLanguageNL" />
+          <ScalarProperty Name="MapLanguageFR" ColumnName="MapLanguageFR" />
+          <ScalarProperty Name="DigitalRights" ColumnName="DigitalRights" />
+          <ScalarProperty Name="MapCountryJumboPilotID" ColumnName="MapCountryJumboPilotID" />
+          <ScalarProperty Name="MapCountryDE" ColumnName="MapCountryDE" />
+          <ScalarProperty Name="MapCountryEN" ColumnName="MapCountryEN" />
+          <ScalarProperty Name="MapCountryNL" ColumnName="MapCountryNL" />
+          <ScalarProperty Name="MapCountryFR" ColumnName="MapCountryFR" />
+          <ScalarProperty Name="MapCountryID" ColumnName="MapCountryID" />
+          <ScalarProperty Name="MapPeriodicityJumboPilotID" ColumnName="MapPeriodicityJumboPilotID" />
+          <ScalarProperty Name="MapCategoryJumboPilotID" ColumnName="MapCategoryJumboPilotID" />
+          <ScalarProperty Name="MapFormatJumboPilotID" ColumnName="MapFormatJumboPilotID" />
+          <ScalarProperty Name="MapCategoryID" ColumnName="MapCategoryID" />
+          <ScalarProperty Name="MapMediaTypeJumboPilotID" ColumnName="MapMediaTypeJumboPilotID" />
+          <ScalarProperty Name="MapCategoryActive" ColumnName="MapCategoryActive" />
+          <ScalarProperty Name="MapCategoryDE" ColumnName="MapCategoryDE" />
+          <ScalarProperty Name="MapCategoryEN" ColumnName="MapCategoryEN" />
+          <ScalarProperty Name="MapCategoryNL" ColumnName="MapCategoryNL" />
+          <ScalarProperty Name="MapCategoryFR" ColumnName="MapCategoryFR" />
+          <ScalarProperty Name="MapPeriodicityActive" ColumnName="MapPeriodicityActive" />
+          <ScalarProperty Name="MapPeriodicityDE" ColumnName="MapPeriodicityDE" />
+          <ScalarProperty Name="MapPeriodicityEN" ColumnName="MapPeriodicityEN" />
+          <ScalarProperty Name="MapPeriodicityNL" ColumnName="MapPeriodicityNL" />
+          <ScalarProperty Name="MapPeriodicityFR" ColumnName="MapPeriodicityFR" />
+          <ScalarProperty Name="MapPeriodicityID" ColumnName="MapPeriodicityID" />
+          <ScalarProperty Name="MapFormatActive" ColumnName="MapFormatActive" />
+          <ScalarProperty Name="MapFormatDE" ColumnName="MapFormatDE" />
+          <ScalarProperty Name="MapFormatEN" ColumnName="MapFormatEN" />
+          <ScalarProperty Name="MapFormatNL" ColumnName="MapFormatNL" />
+          <ScalarProperty Name="MapFormatFR" ColumnName="MapFormatFR" />
+          <ScalarProperty Name="MapFormatID" ColumnName="MapFormatID" />
+          <ScalarProperty Name="MapMediaTypeFR" ColumnName="MapMediaTypeFR" />
+          <ScalarProperty Name="MapMediaTypeNL" ColumnName="MapMediaTypeNL" />
+          <ScalarProperty Name="MapMediaTypeEN" ColumnName="MapMediaTypeEN" />
+          <ScalarProperty Name="MapMediaTypeDE" ColumnName="MapMediaTypeDE" />
+          <ScalarProperty Name="MapMediaTypeActive" ColumnName="MapMediaTypeActive" />
+          <ScalarProperty Name="MapMediaTypeID" ColumnName="MapMediaTypeID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="MediaName" ColumnName="MediaName" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="JumboPilotID" ColumnName="JumboPilotID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMediaFigure">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMediaFigure">
+        <MappingFragment StoreEntitySet="APVMediaFigure">
+          <ScalarProperty Name="Audience" ColumnName="Audience" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="MediaFigureID" ColumnName="MediaFigureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMediaFigureAll">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMediaFigureAll">
+        <MappingFragment StoreEntitySet="APVMediaFigureAll">
+          <ScalarProperty Name="FrmtWidth" ColumnName="FrmtWidth" />
+          <ScalarProperty Name="FrmtLength" ColumnName="FrmtLength" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="C18_44_Percentage" ColumnName="18-44-Percentage" />
+          <ScalarProperty Name="C18_44_Audience" ColumnName="18-44-Audience" />
+          <ScalarProperty Name="C15_Percentage" ColumnName="15-Percentage" />
+          <ScalarProperty Name="C15_Audience" ColumnName="15-Audience" />
+          <ScalarProperty Name="C55_Percentage" ColumnName="55-Percentage" />
+          <ScalarProperty Name="C55_Audience" ColumnName="55-Audience" />
+          <ScalarProperty Name="C35_54_Percentage" ColumnName="35-54-Percentage" />
+          <ScalarProperty Name="C35_54_Audience" ColumnName="35-54-Audience" />
+          <ScalarProperty Name="C12_34_Percentage" ColumnName="12-34-Percentage" />
+          <ScalarProperty Name="C12_34_Audience" ColumnName="12-34-Audience" />
+          <ScalarProperty Name="C12SG7_8_Percentage" ColumnName="12SG7-8-Percentage" />
+          <ScalarProperty Name="C12SG7_8_Audience" ColumnName="12SG7-8-Audience" />
+          <ScalarProperty Name="C12SG5_6_Percentage" ColumnName="12SG5-6-Percentage" />
+          <ScalarProperty Name="C12SG5_6_Audience" ColumnName="12SG5-6-Audience" />
+          <ScalarProperty Name="C12SG3_4_Percentage" ColumnName="12SG3-4-Percentage" />
+          <ScalarProperty Name="C12SG3_4_Audience" ColumnName="12SG3-4-Audience" />
+          <ScalarProperty Name="C12SG1_2_Percentage" ColumnName="12SG1-2-Percentage" />
+          <ScalarProperty Name="C12SG1_2_Audience" ColumnName="12SG1-2-Audience" />
+          <ScalarProperty Name="Fe12_Percentage" ColumnName="Fe12-Percentage" />
+          <ScalarProperty Name="Fe12_Audience" ColumnName="Fe12-Audience" />
+          <ScalarProperty Name="Ho12_Percentage" ColumnName="Ho12-Percentage" />
+          <ScalarProperty Name="Ho12_Audience" ColumnName="Ho12-Audience" />
+          <ScalarProperty Name="C12_Percentage" ColumnName="12-Percentage" />
+          <ScalarProperty Name="C12_Audience" ColumnName="12-Audience" />
+          <ScalarProperty Name="C04_Percentage" ColumnName="04-Percentage" />
+          <ScalarProperty Name="C04_Audience" ColumnName="04-Audience" />
+          <ScalarProperty Name="Total_Audience" ColumnName="Total-Audience" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+          <ScalarProperty Name="MapWeekdayUK" ColumnName="MapWeekdayUK" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="MediascoreID" ColumnName="MediascoreID" />
+          <ScalarProperty Name="JumbopilotID" ColumnName="JumbopilotID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="MediaFigureAllID" ColumnName="MediaFigureAllID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMediaGroup">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMediaGroup">
+        <MappingFragment StoreEntitySet="APVMediaGroup">
+          <ScalarProperty Name="DigitalRights" ColumnName="DigitalRights" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="MediaGroupID" ColumnName="MediaGroupID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVMediaLanguage">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVMediaLanguage">
+        <MappingFragment StoreEntitySet="APVMediaLanguage">
+          <ScalarProperty Name="MapLanguageID" ColumnName="MapLanguageID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="MediaLanguageID" ColumnName="MediaLanguageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVPublicationGroup">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVPublicationGroup">
+        <MappingFragment StoreEntitySet="APVPublicationGroup">
+          <ScalarProperty Name="Publicationgroupid" ColumnName="Publicationgroupid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APVUser">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.APVUser">
+        <MappingFragment StoreEntitySet="APVUser">
+          <ScalarProperty Name="PreviousLoginDate" ColumnName="PreviousLoginDate" />
+          <ScalarProperty Name="CurrentSelectedLanguageID" ColumnName="CurrentSelectedLanguageID" />
+          <ScalarProperty Name="PasswordChangeRequired" ColumnName="PasswordChangeRequired" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturation_Fred">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Facturation_Fred">
+        <MappingFragment StoreEntitySet="Facturation_Fred">
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="OrderDiscount" ColumnName="OrderDiscount" />
+          <ScalarProperty Name="CustDiscount" ColumnName="CustDiscount" />
+          <ScalarProperty Name="Invoicedate" ColumnName="Invoicedate" />
+          <ScalarProperty Name="SE" ColumnName="SE" />
+          <ScalarProperty Name="Extracostdescription" ColumnName="Extracostdescription" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Envois" ColumnName="Envois" />
+          <ScalarProperty Name="Produits" ColumnName="Produits" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="PR" ColumnName="PR" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="Invoicenumber" ColumnName="Invoicenumber" />
+          <ScalarProperty Name="TypeF" ColumnName="TypeF" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests_Fred">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.Tests_Fred">
+        <MappingFragment StoreEntitySet="Tests_Fred">
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VActiveOrders">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VActiveOrders">
+        <MappingFragment StoreEntitySet="VActiveOrders">
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VAddress">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VAddress">
+        <MappingFragment StoreEntitySet="VAddress">
+          <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PY_Countryid" ColumnName="PY_Countryid" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="TI_Contactfunctionid" ColumnName="TI_Contactfunctionid" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="GE_Customercategoryid" ColumnName="GE_Customercategoryid" />
+          <ScalarProperty Name="TA_Addresstypeid" ColumnName="TA_Addresstypeid" />
+          <ScalarProperty Name="Publisherid" ColumnName="Publisherid" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Addressid" ColumnName="Addressid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VArticlesToSend">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VArticlesToSend">
+        <MappingFragment StoreEntitySet="VArticlesToSend">
+          <ScalarProperty Name="SS_Status" ColumnName="SS_Status" />
+          <ScalarProperty Name="NextRun" ColumnName="NextRun" />
+          <ScalarProperty Name="ArticleTitle" ColumnName="ArticleTitle" />
+          <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="EvalId" ColumnName="EvalId" />
+          <ScalarProperty Name="ArticleNo" ColumnName="ArticleNo" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VBaroStats">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VBaroStats">
+        <MappingFragment StoreEntitySet="VBaroStats">
+          <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
+          <ScalarProperty Name="Descriptionfrench" ColumnName="Descriptionfrench" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="TP_Producttypeid" ColumnName="TP_Producttypeid" />
+          <ScalarProperty Name="Usernamecutter" ColumnName="Usernamecutter" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="Productionid" ColumnName="Productionid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustomers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustomers">
+        <MappingFragment StoreEntitySet="VCustomers">
+          <ScalarProperty Name="VATnumber" ColumnName="VATnumber" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustomersDetails">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustomersDetails">
+        <MappingFragment StoreEntitySet="VCustomersDetails">
+          <ScalarProperty Name="Tariffplanid" ColumnName="Tariffplanid" />
+          <ScalarProperty Name="Inclusive" ColumnName="Inclusive" />
+          <ScalarProperty Name="Nextinvoicedate" ColumnName="Nextinvoicedate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Ownerid" ColumnName="Ownerid" />
+          <ScalarProperty Name="OrderInvoicetextid" ColumnName="OrderInvoicetextid" />
+          <ScalarProperty Name="EmailCustomer" ColumnName="EmailCustomer" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Internal" ColumnName="Internal" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Ordertext" ColumnName="Ordertext" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="Invoicetextid" ColumnName="Invoicetextid" />
+          <ScalarProperty Name="Paymenttypeid" ColumnName="Paymenttypeid" />
+          <ScalarProperty Name="VATnumber" ColumnName="VATnumber" />
+          <ScalarProperty Name="VATcodeid" ColumnName="VATcodeid" />
+          <ScalarProperty Name="Accountmanagerid" ColumnName="Accountmanagerid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Customertype" ColumnName="Customertype" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustomersInt">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustomersInt">
+        <MappingFragment StoreEntitySet="VCustomersInt">
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustomersInternational">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustomersInternational">
+        <MappingFragment StoreEntitySet="VCustomersInternational">
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Langue" ColumnName="Langue" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustomersInternationalDetails">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustomersInternationalDetails">
+        <MappingFragment StoreEntitySet="VCustomersInternationalDetails">
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Langue" ColumnName="Langue" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCustWithActiveOrders">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VCustWithActiveOrders">
+        <MappingFragment StoreEntitySet="VCustWithActiveOrders">
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="OB_Invoicetextid" ColumnName="OB_Invoicetextid" />
+          <ScalarProperty Name="Numbersupplinvoice" ColumnName="Numbersupplinvoice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CD_Paymenttypeid" ColumnName="CD_Paymenttypeid" />
+          <ScalarProperty Name="TV_VATcodeid" ColumnName="TV_VATcodeid" />
+          <ScalarProperty Name="VATnumber" ColumnName="VATnumber" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="CO_Accountmanagerid" ColumnName="CO_Accountmanagerid" />
+          <ScalarProperty Name="TC_Customertypeid" ColumnName="TC_Customertypeid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VFIBEPExport">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VFIBEPExport">
+        <MappingFragment StoreEntitySet="VFIBEPExport">
+          <ScalarProperty Name="PDFLink" ColumnName="PDFLink" />
+          <ScalarProperty Name="Languageid" ColumnName="Languageid" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Articletitle" ColumnName="Articletitle" />
+          <ScalarProperty Name="Articlepagenumber" ColumnName="Articlepagenumber" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="AVECurrency" ColumnName="AVECurrency" />
+          <ScalarProperty Name="AVE" ColumnName="AVE" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Articleno" ColumnName="Articleno" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Productionflyersid" ColumnName="Productionflyersid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewAmount">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.viewAmount">
+        <MappingFragment StoreEntitySet="viewAmount">
+          <ScalarProperty Name="Invoiceid" ColumnName="Invoiceid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewCustomers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ViewCustomers">
+        <MappingFragment StoreEntitySet="ViewCustomers">
+          <ScalarProperty Name="Customernotification" ColumnName="Customernotification" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Internal" ColumnName="Internal" />
+          <ScalarProperty Name="PA_Ownerid" ColumnName="PA_Ownerid" />
+          <ScalarProperty Name="Groupdeliverynumber" ColumnName="Groupdeliverynumber" />
+          <ScalarProperty Name="Groupnumber" ColumnName="Groupnumber" />
+          <ScalarProperty Name="OB_Invoicetextid" ColumnName="OB_Invoicetextid" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Shippingblocked" ColumnName="Shippingblocked" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Ordertext" ColumnName="Ordertext" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderlist" ColumnName="Orderlist" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="Numbersupplinvoice" ColumnName="Numbersupplinvoice" />
+          <ScalarProperty Name="CD_Paymenttypeid" ColumnName="CD_Paymenttypeid" />
+          <ScalarProperty Name="TV_VATcodeid" ColumnName="TV_VATcodeid" />
+          <ScalarProperty Name="VATnumber" ColumnName="VATnumber" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="CO_Accountmanagerid" ColumnName="CO_Accountmanagerid" />
+          <ScalarProperty Name="TC_Customertypeid" ColumnName="TC_Customertypeid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewForArchives">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ViewForArchives">
+        <MappingFragment StoreEntitySet="ViewForArchives">
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="ME_Mediatypeid" ColumnName="ME_Mediatypeid" />
+          <ScalarProperty Name="PU_Publicationperiodicityid" ColumnName="PU_Publicationperiodicityid" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewOrderName">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.viewOrderName">
+        <MappingFragment StoreEntitySet="viewOrderName">
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="invoiceid" ColumnName="invoiceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewProduction">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ViewProduction">
+        <MappingFragment StoreEntitySet="ViewProduction">
+          <ScalarProperty Name="Codeorder" ColumnName="Codeorder" />
+          <ScalarProperty Name="Codetypeid" ColumnName="Codetypeid" />
+          <ScalarProperty Name="Descriptiongerman" ColumnName="Descriptiongerman" />
+          <ScalarProperty Name="Descriptionenglish" ColumnName="Descriptionenglish" />
+          <ScalarProperty Name="Descriptiondutch" ColumnName="Descriptiondutch" />
+          <ScalarProperty Name="Descriptionfrench" ColumnName="Descriptionfrench" />
+          <ScalarProperty Name="ME_Mediatypeid" ColumnName="ME_Mediatypeid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewTotalArticles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.ViewTotalArticles">
+        <MappingFragment StoreEntitySet="ViewTotalArticles">
+          <ScalarProperty Name="GroupGE" ColumnName="GroupGE" />
+          <ScalarProperty Name="GroupEN" ColumnName="GroupEN" />
+          <ScalarProperty Name="GroupNL" ColumnName="GroupNL" />
+          <ScalarProperty Name="GroupFR" ColumnName="GroupFR" />
+          <ScalarProperty Name="Codeorder" ColumnName="Codeorder" />
+          <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+          <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+          <ScalarProperty Name="Articles" ColumnName="Articles" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="PU_Publicationperiodicity" ColumnName="PU_Publicationperiodicity" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VKeywords">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VKeywords">
+        <MappingFragment StoreEntitySet="VKeywords">
+          <ScalarProperty Name="KeywordAllKeywords" ColumnName="KeywordAllKeywords" />
+          <ScalarProperty Name="KeywordRTVTitle" ColumnName="KeywordRTVTitle" />
+          <ScalarProperty Name="KT_Typeid" ColumnName="KT_Typeid" />
+          <ScalarProperty Name="ListOrder3" ColumnName="ListOrder3" />
+          <ScalarProperty Name="ListOrder2" ColumnName="ListOrder2" />
+          <ScalarProperty Name="ListOrder1" ColumnName="ListOrder1" />
+          <ScalarProperty Name="KeywordConditionID" ColumnName="KeywordConditionID" />
+          <ScalarProperty Name="NbOfWords" ColumnName="NbOfWords" />
+          <ScalarProperty Name="KeywordConditionName" ColumnName="KeywordConditionName" />
+          <ScalarProperty Name="ConditionName" ColumnName="ConditionName" />
+          <ScalarProperty Name="KC_ConditionTypeid" ColumnName="KC_ConditionTypeid" />
+          <ScalarProperty Name="NbOfConditions" ColumnName="NbOfConditions" />
+          <ScalarProperty Name="KeywordInclude" ColumnName="KeywordInclude" />
+          <ScalarProperty Name="KeywordName" ColumnName="KeywordName" />
+          <ScalarProperty Name="KeywordLineID" ColumnName="KeywordLineID" />
+          <ScalarProperty Name="NbOfKeywords" ColumnName="NbOfKeywords" />
+          <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+          <ScalarProperty Name="LA_Languageid" ColumnName="LA_Languageid" />
+          <ScalarProperty Name="KeywordGroupID" ColumnName="KeywordGroupID" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VNewBaseRubric">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VNewBaseRubric">
+        <MappingFragment StoreEntitySet="VNewBaseRubric">
+          <ScalarProperty Name="RubricName" ColumnName="RubricName" />
+          <ScalarProperty Name="DBS_Id" ColumnName="DBS_Id" />
+          <ScalarProperty Name="RubricID" ColumnName="RubricID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrderAdresses">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrderAdresses">
+        <MappingFragment StoreEntitySet="VOrderAdresses">
+          <ScalarProperty Name="TA_Addresstypeid" ColumnName="TA_Addresstypeid" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Contactfunction" ColumnName="Contactfunction" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Addresstype" ColumnName="Addresstype" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrderFileMvList">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrderFileMvList">
+        <MappingFragment StoreEntitySet="VOrderFileMvList">
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="DirOut" ColumnName="DirOut" />
+          <ScalarProperty Name="DirIn" ColumnName="DirIn" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="OrderFileMoveID" ColumnName="OrderFileMoveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrders">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrders">
+        <MappingFragment StoreEntitySet="VOrders">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ordertext" ColumnName="Ordertext" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Products" ColumnName="Products" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrdersEnd">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrdersEnd">
+        <MappingFragment StoreEntitySet="VOrdersEnd">
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Renewdate" ColumnName="Renewdate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Produit" ColumnName="Produit" />
+          <ScalarProperty Name="Commercial" ColumnName="Commercial" />
+          <ScalarProperty Name="OwnerType" ColumnName="OwnerType" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Secteur" ColumnName="Secteur" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrderSendingDetails">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrderSendingDetails">
+        <MappingFragment StoreEntitySet="VOrderSendingDetails">
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Templatefile" ColumnName="Templatefile" />
+          <ScalarProperty Name="Templatename" ColumnName="Templatename" />
+          <ScalarProperty Name="Deliverymethod" ColumnName="Deliverymethod" />
+          <ScalarProperty Name="Compression" ColumnName="Compression" />
+          <ScalarProperty Name="XMLtemplateid" ColumnName="XMLtemplateid" />
+          <ScalarProperty Name="Emptyfilename" ColumnName="Emptyfilename" />
+          <ScalarProperty Name="Sendemptyfile" ColumnName="Sendemptyfile" />
+          <ScalarProperty Name="Sendseq" ColumnName="Sendseq" />
+          <ScalarProperty Name="SendJPG" ColumnName="SendJPG" />
+          <ScalarProperty Name="Sendpdf" ColumnName="Sendpdf" />
+          <ScalarProperty Name="Sendxml" ColumnName="Sendxml" />
+          <ScalarProperty Name="DelayedHour" ColumnName="DelayedHour" />
+          <ScalarProperty Name="Delayed" ColumnName="Delayed" />
+          <ScalarProperty Name="Passivemode" ColumnName="Passivemode" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrdersEndSubscription">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrdersEndSubscription">
+        <MappingFragment StoreEntitySet="VOrdersEndSubscription">
+          <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Langue" ColumnName="Langue" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Fonction" ColumnName="Fonction" />
+          <ScalarProperty Name="Contactname" ColumnName="Contactname" />
+          <ScalarProperty Name="Date_de_fin" ColumnName="Date de fin" />
+          <ScalarProperty Name="Date_de_dernier_renouvellement" ColumnName="Date de dernier renouvellement" />
+          <ScalarProperty Name="Prix" ColumnName="Prix" />
+          <ScalarProperty Name="Produit" ColumnName="Produit" />
+          <ScalarProperty Name="Commercial" ColumnName="Commercial" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Commande" ColumnName="Commande" />
+          <ScalarProperty Name="Secteur" ColumnName="Secteur" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrdersRTV">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrdersRTV">
+        <MappingFragment StoreEntitySet="VOrdersRTV">
+          <ScalarProperty Name="Ordersubscriptionid" ColumnName="Ordersubscriptionid" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOrdersWeb">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VOrdersWeb">
+        <MappingFragment StoreEntitySet="VOrdersWeb">
+          <ScalarProperty Name="Ordersubscriptionid" ColumnName="Ordersubscriptionid" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="Customerid" ColumnName="Customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VProductionFlyers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.VProductionFlyers">
+        <MappingFragment StoreEntitySet="VProductionFlyers">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Publicationname" ColumnName="Publicationname" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="Ordername" ColumnName="Ordername" />
+          <ScalarProperty Name="ArticleLanguage" ColumnName="ArticleLanguage" />
+          <ScalarProperty Name="Picturename" ColumnName="Picturename" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Articletitle" ColumnName="Articletitle" />
+          <ScalarProperty Name="Publicationid" ColumnName="Publicationid" />
+          <ScalarProperty Name="PR_Productid" ColumnName="PR_Productid" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="Productiondate" ColumnName="Productiondate" />
+          <ScalarProperty Name="Publicationdate" ColumnName="Publicationdate" />
+          <ScalarProperty Name="Productionflyersid" ColumnName="Productionflyersid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Applications">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_Applications">
+        <MappingFragment StoreEntitySet="vw_aspnet_Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_MembershipUsers">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_MembershipUsers">
+        <MappingFragment StoreEntitySet="vw_aspnet_MembershipUsers">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Profiles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_Profiles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Profiles">
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Roles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_Roles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Roles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Users">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_Users">
+        <MappingFragment StoreEntitySet="vw_aspnet_Users">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="vw_aspnet_UsersInRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Paths">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_WebPartState_Paths">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Paths">
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Shared">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_WebPartState_Shared">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Shared">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_User">
+      <EntityTypeMapping TypeName="AuxipressJumboPilotModel.vw_aspnet_WebPartState_User">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_User">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

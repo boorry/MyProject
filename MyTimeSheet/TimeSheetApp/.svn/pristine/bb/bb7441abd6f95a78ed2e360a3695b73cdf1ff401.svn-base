@@ -1,0 +1,196 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mime;
+using System.Text;
+
+using System.Windows;
+using TimeSheetApp.data;
+using TimeSheetApp.Utils;
+
+namespace TimeSheetApp.Model
+{
+    public  class ServiceProjectTaskUser
+    {
+        private readonly TimeSheetDBEntities _context;
+
+        public ServiceProjectTaskUser()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+
+        public  void ModifierDateDebutDansProjectTaskUser(VProjectTaskUser vProjectTaskUser, DateTime dateDebut)
+        {
+            try
+            {
+                var temp = _context.ProjectTaskUser.FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+                if (temp != null)
+                {
+                    temp.StartTask = dateDebut;
+                    General.SaveContextChanges("modificaton dans ProjectTaskUser", _context);
+                    General.SaveContextChanges("modification dans ProjectTaskUser : " + vProjectTaskUser.ProjectTaskUserID, _context);
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+        public  bool ModifierDurrEeEffectiveProjectTaskUser(VProjectTaskUser vProjectTaskUser, float tempsTotal)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.ProjectTaskUser.FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+                if (temp != null)
+                {
+                    //  MessageBox.Show(tempsTotal.ToString());
+                    temp.ExecutionTime = tempsTotal;
+                    General.SaveContextChanges("modification dans ProjectTaskUser : " + vProjectTaskUser.ProjectTaskUserID, _context);
+                    retour = true;
+                }
+
+                
+            }
+            catch (Exception )
+            {
+
+                return false;
+            }
+            return retour;
+        }
+
+        public  bool ModifierDateFinDansProjectTaskUser(VProjectTaskUser vProjectTaskUser, DateTime dateFin)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.ProjectTaskUser.FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+                if (temp != null)
+                {
+                    temp.EndTask = dateFin;
+                    General.SaveContextChanges("Modifiaction de date de fin du projet  : " + vProjectTaskUser.ProjectName, _context);
+                    retour = true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return retour;
+        }
+
+        public  bool AjouterDansProjectTaskUser(VProjectTask vProjectTask,string intervenant)//id MapTaskState
+        {
+            //il faut d'abord selectionner le dérnier id  "MapTaskState"
+            var mapTaskState =
+                   from mts in _context.MapTaskState
+                   orderby mts.MapTaskStateID descending
+                   select mts;
+
+            long idDernierMapTaskState = mapTaskState.ToList()[0].MapTaskStateID;
+
+            ProjectTaskUser projectTaskUser = new ProjectTaskUser();
+            projectTaskUser.MapTaskStateID = idDernierMapTaskState;
+            projectTaskUser.ProjectID = vProjectTask.ProjectID;
+            projectTaskUser.TaskID = vProjectTask.TaskID;
+            projectTaskUser.UserName = intervenant;
+
+
+            _context.ProjectTaskUser.Add(projectTaskUser);
+            General.SaveContextChanges("ajout dans ProjectTaskUser : "+projectTaskUser.ProjectTaskUserID, _context);
+            return true;
+        }
+
+        public  bool SupprimerDateFinDansProjectTaskUser(VProjectTaskUser vProjectTaskUser)
+        {
+            bool retour = false;
+            try
+            {
+                var temp = _context.ProjectTaskUser.FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+                if (temp != null)
+                {
+                    temp.EndTask = null;
+                    General.SaveContextChanges("suppression de la tade de fin d'un élement dans ProjectTaskUser : " + vProjectTaskUser.ProjectTaskUserID, _context);
+                    retour = true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return retour;
+        }
+
+        public bool SupprimerDUnProjectTaskUser(VProjectTaskUser vProjectTaskUser)//suppression d'un TimeSheet
+        {
+            bool retour = false;
+            try
+            {
+
+                
+                ServiceUserTime serviceUserTime=new ServiceUserTime();
+                if (serviceUserTime.SupprimerTaskUserTimeAPartirDUnvProjectTaskUser(vProjectTaskUser))//IL faut d'abord suppimle lélement dans "TaskUserTime"
+                {
+                    var temp = _context.ProjectTaskUser.FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+                    if (temp != null)
+                    {
+                        _context.ProjectTaskUser.Remove(temp);
+                        // General.SaveContextChanges("suppression dans ProjectTaskUser : " + vProjectTaskUser.ProjectTaskUserID, _context);
+                        _context.SaveChanges();
+                        retour = true;
+                    }
+                }
+               
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+            return retour;
+        }
+
+
+        public  bool EstDejaDansDansProjectTaskUser(VProjectTask vProjectTask)
+        {
+            bool trouvE = false;
+            try
+            {
+                var tmp = _context.VProjectTaskUser.FirstOrDefault(x => x.ProjectID == vProjectTask.ProjectID && x.TaskID == vProjectTask.TaskID);
+              if(tmp != null)
+                {
+                    trouvE = true;
+                }
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                trouvE = false;
+
+            }
+            return trouvE;
+        }
+
+        public bool TacheEstDansProjectTaskUser(Task task)
+        {
+            bool trouvE = false;
+            try
+            {
+                var tmp = _context.VProjectTaskUser.FirstOrDefault(x => x.TaskID == task.TaskID);
+                if (tmp != null)
+                {
+                    trouvE = true;
+                }
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                trouvE = false;
+
+            }
+            return trouvE;
+        }
+
+    }
+}

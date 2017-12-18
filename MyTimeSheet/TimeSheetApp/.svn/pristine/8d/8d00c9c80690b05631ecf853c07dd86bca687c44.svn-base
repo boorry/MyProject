@@ -1,0 +1,90 @@
+﻿<Window x:Class="TimeSheetApp.View.TimeSheetAjoutView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeSheetApp.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:command="http://www.galasoft.ch/mvvmlight"
+        mc:Ignorable="d"
+        Title="TimeSheetAjoutView" Height="NaN" Width="NaN"
+        DataContext="{Binding TimeSheetAjoutViewModelVm, Source={StaticResource Locator}}"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border  Grid.Row="0" BorderBrush="Gray" BorderThickness="1">
+            <Grid  HorizontalAlignment="Left" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <DockPanel Margin="10,0,0,0">
+                    <Button  Command="{Binding RetourCommand}" Content="{materialDesign:PackIcon ArrowLeftBold}" Style="{DynamicResource ButtonMenu}" ToolTip="Retour" >
+                    </Button>
+                    <Button  Command="{Binding SauverCommand}" Content="{materialDesign:PackIcon ContentSave}" Style="{DynamicResource ButtonMenu}" ToolTip="Ajouter">
+                    </Button >
+                    <Button Command="{Binding ActualiserCommand}" Content="{materialDesign:PackIcon Refresh}" Style="{DynamicResource ButtonMenu}" ToolTip="Actualiser">
+                    </Button>
+                  
+                </DockPanel>
+                
+            </Grid>
+        </Border>
+        <Border Grid.Row="1"  BorderBrush="Gray" BorderThickness="1">
+        <Grid >
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="Projet" Foreground="DimGray" FontSize="13" FontWeight="DemiBold" Margin="20,0,0,0"></Label>
+                <ComboBox Grid.Column="1" Name="mCbFiltre"   ItemsSource="{Binding LstProjet,Mode= TwoWay}" SelectedItem="{Binding SelectionComboBoxProjet, Mode=TwoWay}" DisplayMemberPath="ProjectName" HorizontalAlignment="Right" Width="247" Height="31" VerticalAlignment="Top" Margin="0,0,-222,0"></ComboBox>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2"  BorderBrush="Black" BorderThickness="1">
+            <Grid>
+                <DataGrid IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding LstPrjTache,Mode= TwoWay}" SelectedItem="{Binding Selection,Mode= TwoWay}" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Projet"  Binding="{Binding ProjectName  , Mode=OneWay}" Width="*"/>
+                        <DataGridTextColumn Header="Tache"  Binding="{Binding TaskName , Mode=OneWay}" Width="*"/>
+                        <DataGridTextColumn Header="Créer par"  Binding="{Binding CreatedBy , Mode=OneWay}" Width="*"/>
+                        <DataGridTextColumn Header="Date de création"  Binding="{Binding CreationDate, Mode=OneWay}" Width="*"/>
+                    </DataGrid.Columns>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <command:EventToCommand Command="{Binding SauverCommand}"  
+                                CommandParameter="{Binding Selection}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </DataGrid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3"  BorderBrush="Gray" BorderThickness="1">
+
+            <Label  Content="{Binding NbResult, Mode = TwoWay}"></Label>
+        </Border>
+    </Grid>
+
+    <Window.Resources>
+            <Style x:Key="ButtonMenu" TargetType="Button" >
+                <Setter Property="Foreground" Value="Gray" />
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="Width" Value="35"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+                <Setter Property="BorderBrush" Value="White" ></Setter>
+            </Style>
+        </Window.Resources>
+    
+
+
+</Window>

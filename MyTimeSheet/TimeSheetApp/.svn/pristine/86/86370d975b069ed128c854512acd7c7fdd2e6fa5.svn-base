@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using TimeSheetApp.data;
+
+namespace TimeSheetApp.Model
+{
+    class ServiceProjectTask
+    {
+        private readonly TimeSheetDBEntities _context;
+
+        public ServiceProjectTask()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+
+        public bool TacheEstDansProjectTask(Task task)
+        {
+            bool trouvE = false;
+            try
+            {
+                var tmp = _context.VProjectTask.FirstOrDefault(x => x.TaskID == task.TaskID);
+                if (tmp != null)
+                {
+                    trouvE = true;
+                }
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                trouvE = false;
+
+            }
+            return trouvE;
+        }
+    }
+}

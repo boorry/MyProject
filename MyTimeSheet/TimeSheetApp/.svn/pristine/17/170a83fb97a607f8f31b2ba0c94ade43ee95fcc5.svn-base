@@ -1,0 +1,224 @@
+﻿<UserControl x:Class="TimeSheetApp.Veiw.TimeSheetDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TimeSheetApp.Veiw"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Width="Auto"
+             
+             DataContext="{Binding TimeSheetDetailVeiwModelVm, Source={StaticResource Locator}}"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1">
+            <Label FontSize="14" FontWeight="DemiBold" Foreground="DimGray" Content="Detail TimeSheet " />
+    </Border>
+
+
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1">
+            <Grid Row="1" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+                <DockPanel Margin="10,0,0,0">
+                    <Button Command="{Binding RetourCommand}" Content="{materialDesign:PackIcon ArrowLeftBold}"  Style="{DynamicResource ButtonMenu}" ToolTip="Retour"/>
+                    <Button Command="{Binding ActualiserCommand}" Content="{materialDesign:PackIcon Refresh}" Style="{DynamicResource ButtonMenu}" ToolTip="Actualiser"/>
+                    <Button Command="{Binding LancerOuPauserTacheCommand}" Style="{DynamicResource ContentPlayPauseRunning}" />
+                    <Button Command="{Binding StopCommand}" Content="{materialDesign:PackIcon Stop}" Style="{DynamicResource EnabledRunningStop}" ToolTip="Stoper"/>
+                </DockPanel>
+            </Grid>
+        </Border>
+       
+        <Grid Grid.Row="2">
+            <StackPanel Name="PanelRight" Height="500" Width="550" Margin="170,0,0,0" HorizontalAlignment="Left">
+                <Label Content="Projet" FontWeight="DemiBold" Height="30" HorizontalAlignment="left" Margin="30,40,0,0" Foreground="DimGray" FontSize="13" Width="70" />
+                <TextBox Text="{Binding NomProjet }" Margin="50,-45,0,0" Height="30" Width="270" IsEnabled="False"/>
+                <Label Content="Description" FontWeight="DemiBold" HorizontalAlignment="left" Margin="30,30,0,0" Height="30" Foreground="DimGray" FontSize="13" Width="100" />
+                <TextBox Text="{Binding Description }" VerticalContentAlignment="Top" Margin="50,-20,0,0" Height="130" Width="270" IsEnabled="False"/>
+                <Label Content="Client" FontWeight="DemiBold" HorizontalAlignment="left" Margin="30,30,0,0" Height="30" Foreground="DimGray" FontSize="13" Width="70" />
+                <TextBox Text="{Binding Client }" Margin="50,-40,0,0" Height="30" Width="270" IsEnabled="False"/>
+                <Label Content="Date debut" FontWeight="DemiBold" HorizontalAlignment="left" Margin="30,30,0,0" Height="30" Foreground="DimGray" FontSize="13" Width="90" />
+                <TextBox Text="{Binding DateDebutPrj }" Margin="50,-40,0,0" Height="30" Width="270" IsEnabled="False"/>
+                <Label Content="Durée estimée" FontWeight="DemiBold" HorizontalAlignment="left" Margin="30,30,0,0" Height="30" Foreground="DimGray" FontSize="13" Width="100" />
+                <TextBox Text="{Binding DurrEeEstimE }" Margin="50,-40,0,0" Height="30" Width="270" IsEnabled="False"/>
+                <Label Content="Durée totale" FontWeight="DemiBold" HorizontalAlignment="left" Margin="30,30,0,0" Height="30" Foreground="DimGray" FontSize="13" Width="100" />
+                <TextBox Text="{Binding DurrEeTotal }" Margin="50,-40,0,0" Height="30" Width="270" IsEnabled="False" />
+            </StackPanel>
+
+            <StackPanel Name="PanelLeft" Height="500" Width="550" Margin="0,0,200,0" HorizontalAlignment="Right">
+                <Label Content="Tâche" HorizontalAlignment="Left" Height="30" Width="120" FontWeight="DemiBold" Foreground="DimGray" FontSize="13" Margin="20,40,0,0" />
+                <TextBox Text="{Binding NomTache }" IsEnabled="False" Margin="50,-40,0,0" Height="30" Width="270"/>
+                <Label Content="Etat" HorizontalAlignment="Left" Height="30" Width="120" FontWeight="DemiBold" Foreground="DimGray" FontSize="13" Margin="20,30,0,0"/>
+                <TextBox Text="{Binding EtatTache}" IsEnabled="False" Margin="50,-40,0,0" Height="30" Width="270"/>
+                <Label Content="Date debut" HorizontalAlignment="Left" Height="30" Width="120" FontWeight="DemiBold" Foreground="DimGray" FontSize="13" Margin="20,30,0,0"/>
+                <TextBox Text="{Binding DateDebutTache }" IsEnabled="False" Margin="50,-40,0,0" Height="30" Width="270"/>
+                <Label Content="Date fin" HorizontalAlignment="Left" Height="30" Width="120" FontWeight="DemiBold" Foreground="DimGray" FontSize="13" Margin="20,30,0,0"/>
+                <TextBox Text="{Binding DateFinTache }" IsEnabled="False" Margin="50,-40,0,0" Height="30" Width="270" />
+                <Label Content="Durée effective" HorizontalAlignment="Left" Height="30" Width="120" FontWeight="DemiBold" Foreground="DimGray" FontSize="13" Margin="20,30,0,0"/>
+                <TextBox Text="{Binding DurrEEffEctiveTache }" IsEnabled="False" Margin="50,-40,0,0" Height="30" Width="270"/>
+            </StackPanel>
+
+        </Grid>
+        
+    </Grid>
+
+
+    <!--Slyle pour le bouton play/pause-->
+    <UserControl.Resources>
+        <Style x:Key="ContentPlayPauseRunning" TargetType="Button">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En pause">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Play}" />
+                    <Setter Property="ToolTip" Value="Lancer"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En Pause">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Play}" />
+                    <Setter Property="ToolTip" Value="Lancer"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En attente">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Play}"/>
+                    <Setter Property="ToolTip" Value="Lancer"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="Engagé">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Play}"/>
+                    <Setter Property="ToolTip" Value="Lancer"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="Terminé">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Play}"/>
+                    <Setter Property="ToolTip" Value="Lancer"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En cours">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Pause}"/>
+                    <Setter Property="ToolTip" Value="Pauser"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En Cours">
+                    <Setter Property="Content" Value="{materialDesign:PackIcon Pause}"/>
+                    <Setter Property="ToolTip" Value="Pauser"></Setter>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ButtonMenu" TargetType="Button" >
+            <Setter Property="Foreground" Value="Gray" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Width" Value="35"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="BorderBrush" Value="White" ></Setter>
+        </Style>
+
+        <Style x:Key="EnabledRunningStop" TargetType="Button">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="Engagé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En pause">
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En Pause">
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="Terminé">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En attente">
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=EtatTache}" Value="En Cours">
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="Width" Value="35"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="BorderBrush" Value="White" ></Setter>
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+</UserControl>

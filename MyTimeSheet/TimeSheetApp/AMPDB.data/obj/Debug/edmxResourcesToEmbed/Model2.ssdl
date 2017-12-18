@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APMDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CleanFilesDetail">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="int" Nullable="false" />
+    <Property Name="FolderPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KeepLastUnit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeepLastValue" Type="int" Nullable="false" />
+    <Property Name="Filter" Type="nvarchar(max)" />
+    <Property Name="DeleteSubfolders" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="ECCategory">
+    <Key>
+      <PropertyRef Name="ECCategoryID" />
+    </Key>
+    <Property Name="ECCategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ListOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="ECWriters">
+    <Key>
+      <PropertyRef Name="ECWritersID" />
+    </Key>
+    <Property Name="ECWritersID" Type="bigint" Nullable="false" />
+    <Property Name="WriterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="255" />
+    <Property Name="ListOrder" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="NbOfFiles" Type="int" />
+    <Property Name="ADName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EPWriters">
+    <Key>
+      <PropertyRef Name="EPWritersID" />
+    </Key>
+    <Property Name="EPWritersID" Type="bigint" Nullable="false" />
+    <Property Name="WriterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="255" />
+    <Property Name="ListOrder" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="NbOfFiles" Type="int" />
+    <Property Name="ADName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="InternationalDir">
+    <Key>
+      <PropertyRef Name="InternationalDirID" />
+    </Key>
+    <Property Name="InternationalDirID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Directory" Type="nvarchar" MaxLength="255" />
+    <Property Name="FilePrefix" Type="nvarchar" MaxLength="255" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LockFiles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="paths" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="MapCountry">
+    <Key>
+      <PropertyRef Name="MapCountryID" />
+    </Key>
+    <Property Name="MapCountryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewBaseName" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsoCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapLanguage">
+    <Key>
+      <PropertyRef Name="MapLanguageID" />
+    </Key>
+    <Property Name="MapLanguageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewBaseName" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsoCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapModule">
+    <Key>
+      <PropertyRef Name="MapModuleID" />
+    </Key>
+    <Property Name="MapModuleID" Type="int" Nullable="false" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="ServiceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="TimeLife" Type="datetime" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsService" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="SortIndex" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapSector">
+    <Key>
+      <PropertyRef Name="MapSectorID" />
+    </Key>
+    <Property Name="MapSectorID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewBaseDir" Type="nvarchar" MaxLength="255" />
+    <Property Name="SectorName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapWS">
+    <Key>
+      <PropertyRef Name="WSID" />
+    </Key>
+    <Property Name="WSID" Type="bigint" Nullable="false" />
+    <Property Name="WSName" Type="nvarchar" MaxLength="255" />
+    <Property Name="WSDescription" Type="nvarchar" MaxLength="2048" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Mediargus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkingDate" Type="datetime" />
+    <Property Name="Sourcename" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModDate" Type="datetime" />
+    <Property Name="StatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="MediargusFTPExclude">
+    <Key>
+      <PropertyRef Name="MediargusFTPExcludeID" />
+    </Key>
+    <Property Name="MediargusFTPExcludeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DirectoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MediargusFTPStatus">
+    <Key>
+      <PropertyRef Name="MediargusFTPStatusID" />
+    </Key>
+    <Property Name="MediargusFTPStatusID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DirName" Type="nvarchar" MaxLength="2500" Nullable="false" />
+    <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MoveFilesDetail">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="int" Nullable="false" />
+    <Property Name="Origin" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Destination" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Filter" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Subfolders" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DeleteEmptySubfolders" Type="bit" Nullable="false" />
+    <Property Name="Timing" Type="int" Nullable="false" />
+    <Property Name="DaysToKeep" Type="int" />
+  </EntityType>
+  <EntityType Name="NewbaseServers">
+    <Key>
+      <PropertyRef Name="NewbaseServerID" />
+    </Key>
+    <Property Name="NewbaseServerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsOnError" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="SendMail" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewbaseServices">
+    <Key>
+      <PropertyRef Name="NewbaseServiceID" />
+    </Key>
+    <Property Name="NewbaseServiceID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar" MaxLength="255" />
+    <Property Name="NewbaseServerID" Type="int" />
+    <Property Name="IsOnError" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="SendMail" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parameters">
+    <Key>
+      <PropertyRef Name="APMDBID" />
+    </Key>
+    <Property Name="APMDBID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParamName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ParamValue" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModuleID" Type="int" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="Category" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProcessState">
+    <Key>
+      <PropertyRef Name="ProcessStateId" />
+    </Key>
+    <Property Name="ProcessStateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MapModuleId" Type="int" Nullable="false" />
+    <Property Name="JobProcess" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProcessStartTime" Type="datetime" />
+    <Property Name="ProcessState" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaxAlert" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UICustomerMail">
+    <Key>
+      <PropertyRef Name="UICustomerMailID" />
+    </Key>
+    <Property Name="UICustomerMailID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSAccess">
+    <Key>
+      <PropertyRef Name="WSAccessID" />
+    </Key>
+    <Property Name="WSAccessID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WSID" Type="bigint" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'APMDB.dbo.VCleanFiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VCleanFiles">
+    <Key>
+      <PropertyRef Name="APMDBID" />
+      <PropertyRef Name="ParamName" />
+      <PropertyRef Name="FolderPath" />
+      <PropertyRef Name="KeepLastUnit" />
+      <PropertyRef Name="KeepLastValue" />
+      <PropertyRef Name="DeleteSubfolders" />
+    </Key>
+    <Property Name="APMDBID" Type="int" Nullable="false" />
+    <Property Name="ParamName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FolderPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KeepLastUnit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeepLastValue" Type="int" Nullable="false" />
+    <Property Name="Filter" Type="nvarchar(max)" />
+    <Property Name="DeleteSubfolders" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'APMDB.dbo.VECWriters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VECWriters">
+    <Key>
+      <PropertyRef Name="ECWritersID" />
+      <PropertyRef Name="Info" />
+      <PropertyRef Name="DNS" />
+      <PropertyRef Name="ListOrder" />
+    </Key>
+    <Property Name="ECWritersID" Type="bigint" Nullable="false" />
+    <Property Name="WriterName" Type="nvarchar" MaxLength="63" />
+    <Property Name="Info" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="DNS" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="255" />
+    <Property Name="ListOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'APMDB.dbo.VEPWriters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VEPWriters">
+    <Key>
+      <PropertyRef Name="EPWritersID" />
+      <PropertyRef Name="Cat1" />
+      <PropertyRef Name="Cat2" />
+      <PropertyRef Name="Cat34" />
+      <PropertyRef Name="ListOrder" />
+    </Key>
+    <Property Name="EPWritersID" Type="bigint" Nullable="false" />
+    <Property Name="WriterName" Type="nvarchar" MaxLength="63" />
+    <Property Name="Cat1" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Cat2" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Cat34" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="255" />
+    <Property Name="ListOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'APMDB.dbo.VMediargus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VMediargus">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StatusName" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="WorkingDate" Type="datetime" />
+    <Property Name="Sourcename" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModDate" Type="datetime" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="StatusID" Type="int" />
+  </EntityType>
+  <Association Name="FK_NewbaseServices_NewbaseServers">
+    <End Role="NewbaseServers" Type="Self.NewbaseServers" Multiplicity="0..1" />
+    <End Role="NewbaseServices" Type="Self.NewbaseServices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewbaseServers">
+        <PropertyRef Name="NewbaseServerID" />
+      </Principal>
+      <Dependent Role="NewbaseServices">
+        <PropertyRef Name="NewbaseServerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcessState_MapModule">
+    <End Role="MapModule" Type="Self.MapModule" Multiplicity="1" />
+    <End Role="ProcessState" Type="Self.ProcessState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MapModule">
+        <PropertyRef Name="MapModuleID" />
+      </Principal>
+      <Dependent Role="ProcessState">
+        <PropertyRef Name="MapModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSAccess_MapWS">
+    <End Role="MapWS" Type="Self.MapWS" Multiplicity="1" />
+    <End Role="WSAccess" Type="Self.WSAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MapWS">
+        <PropertyRef Name="WSID" />
+      </Principal>
+      <Dependent Role="WSAccess">
+        <PropertyRef Name="WSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="APMDBModelStoreContainer">
+    <EntitySet Name="CleanFilesDetail" EntityType="Self.CleanFilesDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ECCategory" EntityType="Self.ECCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ECWriters" EntityType="Self.ECWriters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EPWriters" EntityType="Self.EPWriters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InternationalDir" EntityType="Self.InternationalDir" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LockFiles" EntityType="Self.LockFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapCountry" EntityType="Self.MapCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapLanguage" EntityType="Self.MapLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapModule" EntityType="Self.MapModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapSector" EntityType="Self.MapSector" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapStatus" EntityType="Self.MapStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapWS" EntityType="Self.MapWS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mediargus" EntityType="Self.Mediargus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MediargusFTPExclude" EntityType="Self.MediargusFTPExclude" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MediargusFTPStatus" EntityType="Self.MediargusFTPStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MoveFilesDetail" EntityType="Self.MoveFilesDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewbaseServers" EntityType="Self.NewbaseServers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewbaseServices" EntityType="Self.NewbaseServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parameters" EntityType="Self.Parameters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcessState" EntityType="Self.ProcessState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UICustomerMail" EntityType="Self.UICustomerMail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WSAccess" EntityType="Self.WSAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VCleanFiles" EntityType="Self.VCleanFiles" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VCleanFiles].[APMDBID] AS [APMDBID], 
+    [VCleanFiles].[ParamName] AS [ParamName], 
+    [VCleanFiles].[FolderPath] AS [FolderPath], 
+    [VCleanFiles].[KeepLastUnit] AS [KeepLastUnit], 
+    [VCleanFiles].[KeepLastValue] AS [KeepLastValue], 
+    [VCleanFiles].[Filter] AS [Filter], 
+    [VCleanFiles].[DeleteSubfolders] AS [DeleteSubfolders], 
+    [VCleanFiles].[Active] AS [Active]
+    FROM [dbo].[VCleanFiles] AS [VCleanFiles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VECWriters" EntityType="Self.VECWriters" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VECWriters].[ECWritersID] AS [ECWritersID], 
+    [VECWriters].[WriterName] AS [WriterName], 
+    [VECWriters].[Info] AS [Info], 
+    [VECWriters].[DNS] AS [DNS], 
+    [VECWriters].[Path] AS [Path], 
+    [VECWriters].[ListOrder] AS [ListOrder]
+    FROM [dbo].[VECWriters] AS [VECWriters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VEPWriters" EntityType="Self.VEPWriters" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VEPWriters].[EPWritersID] AS [EPWritersID], 
+    [VEPWriters].[WriterName] AS [WriterName], 
+    [VEPWriters].[Cat1] AS [Cat1], 
+    [VEPWriters].[Cat2] AS [Cat2], 
+    [VEPWriters].[Cat34] AS [Cat34], 
+    [VEPWriters].[Path] AS [Path], 
+    [VEPWriters].[ListOrder] AS [ListOrder]
+    FROM [dbo].[VEPWriters] AS [VEPWriters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VMediargus" EntityType="Self.VMediargus" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VMediargus].[ID] AS [ID], 
+    [VMediargus].[WorkingDate] AS [WorkingDate], 
+    [VMediargus].[Sourcename] AS [Sourcename], 
+    [VMediargus].[CreationDate] AS [CreationDate], 
+    [VMediargus].[ModDate] AS [ModDate], 
+    [VMediargus].[StatusName] AS [StatusName], 
+    [VMediargus].[StatusID] AS [StatusID]
+    FROM [dbo].[VMediargus] AS [VMediargus]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_NewbaseServices_NewbaseServers" Association="Self.FK_NewbaseServices_NewbaseServers">
+      <End Role="NewbaseServers" EntitySet="NewbaseServers" />
+      <End Role="NewbaseServices" EntitySet="NewbaseServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcessState_MapModule" Association="Self.FK_ProcessState_MapModule">
+      <End Role="MapModule" EntitySet="MapModule" />
+      <End Role="ProcessState" EntitySet="ProcessState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSAccess_MapWS" Association="Self.FK_WSAccess_MapWS">
+      <End Role="MapWS" EntitySet="MapWS" />
+      <End Role="WSAccess" EntitySet="WSAccess" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

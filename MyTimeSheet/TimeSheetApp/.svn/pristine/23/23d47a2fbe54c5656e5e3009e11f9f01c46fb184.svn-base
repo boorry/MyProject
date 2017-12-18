@@ -1,0 +1,222 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using TimeSheetApp.data;
+using TimeSheetApp.Utils;
+
+namespace TimeSheetApp.Model
+{
+    public  class ServiceUserTime
+    {
+        private readonly TimeSheetDBEntities _context;
+
+        public ServiceUserTime()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+        public  List<VTaskTime> LireLstVTaskTimeDuProjectTaskUser(VProjectTaskUser vProjectTaskUser)
+        {
+            try
+            {
+                //var taskUserTime = context.TaskUserTime.OrderBy(Tasck) .FirstOrDefault(x => x.ProjectTaskUserID.ToString() == idPtu);
+                //MessageBox.Show(taskUserTime.TaskUserTimeID.ToString());
+
+                var res =
+                    from vti in _context.VTaskTime
+                    where vti.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID
+                    select vti;
+
+                return res.ToList();
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+        public  bool AjouterDansTaskUserTime(TaskUserTime taskUserTime)
+        {
+            bool retour = false;
+            try
+            {
+
+                _context.TaskUserTime.Add(taskUserTime);
+                General.SaveContextChanges("ajout d'un UserTime id : " + taskUserTime.TaskUserTimeID, _context);
+                retour = true;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+            return retour;
+
+        }
+
+
+        public  TaskUserTime ChargerLeDernierUserTime(string idPtu)
+        {
+            try
+            {
+                //var taskUserTime = context.TaskUserTime.OrderBy(Tasck) .FirstOrDefault(x => x.ProjectTaskUserID.ToString() == idPtu);
+                //MessageBox.Show(taskUserTime.TaskUserTimeID.ToString());
+
+                var taskUserTime =
+                    from ut in _context.TaskUserTime
+                    where ut.ProjectTaskUserID.ToString() == idPtu
+                    orderby ut.TaskUserTimeID descending
+                    select ut;
+
+                return taskUserTime.ToList()[0];
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+
+
+
+        public  TaskUserTime ChargerLeDérnierTaskUserTimeAssocierAuVProjectTaskUser(VProjectTaskUser vProjectTaskUser)
+        {
+            try
+            {
+
+                var taskUserTime = _context.TaskUserTime.OrderByDescending(x => x.TaskUserTimeID).FirstOrDefault(x => x.ProjectTaskUserID == vProjectTaskUser.ProjectTaskUserID);
+
+
+                return taskUserTime;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+
+        public  TaskUserTime ChargerUnUserTime(VTaskTime vTaskTime)
+        {
+            try
+            {
+
+
+                var taskUserTime = _context.TaskUserTime.FirstOrDefault(x => x.TaskUserTimeID == vTaskTime.TaskUserTimeID);
+
+                return taskUserTime;
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+
+
+        public  bool ModifierTaskUserTime(long id, DateTime? startDate, DateTime? endDate)
+        {
+            try
+            {
+
+
+                var temp = _context.TaskUserTime.FirstOrDefault(x => x.TaskUserTimeID == id);
+                if (temp != null)
+                {
+
+                    temp.startDate = startDate;
+                    temp.EndDate = endDate;
+                    General.SaveContextChanges("modification d'un UserTime id : " + temp.TaskUserTimeID, _context);
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+        public  bool ModifierTaskUserTime(TaskUserTime update)
+        {
+            try
+            {
+
+                
+                var temp = _context.TaskUserTime.FirstOrDefault(x => x.TaskUserTimeID == update.TaskUserTimeID);
+                if (temp != null)
+                {
+                    
+                    temp = update;
+
+                    General.SaveContextChanges("modification d'un UserTime id : " + temp.TaskUserTimeID, _context);
+
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+        public bool SupprimerTaskUserTimeAPartirDUnvProjectTaskUser(VProjectTaskUser vProjectTaskUserAsupprimer)
+        {
+            try
+            {
+
+                List<TaskUserTime> lstTaskUserTime  = _context.TaskUserTime.Where(x => x.ProjectTaskUserID == vProjectTaskUserAsupprimer.ProjectTaskUserID).ToList();
+
+                foreach (var temp in lstTaskUserTime)
+                {
+                    _context.TaskUserTime.Remove(temp);
+
+                    General.SaveContextChanges("suppression d'un UserTime id : " + temp.TaskUserTimeID, _context);
+                }
+               
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+        public bool ModifierTaskUserTime(VTaskTime update)
+        {
+            try
+            {
+
+
+                var temp = _context.TaskUserTime.FirstOrDefault(x => x.TaskUserTimeID == update.TaskUserTimeID);
+                if (temp != null)
+                {
+
+                    temp.startDate = update.startDate;
+                    temp.EndDate = update.EndDate;
+                    General.SaveContextChanges("ajout d'un UserTime id : " + temp.TaskUserTimeID, _context);
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+     
+
+
+
+    }
+}

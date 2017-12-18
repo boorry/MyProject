@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APMDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CleanFilesDetail">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+    <Property Name="FolderPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeepLastUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeepLastValue" Type="Int32" Nullable="false" />
+    <Property Name="Filter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteSubfolders" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ECCategory">
+    <Key>
+      <PropertyRef Name="ECCategoryID" />
+    </Key>
+    <Property Name="ECCategoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ListOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ECWriters">
+    <Key>
+      <PropertyRef Name="ECWritersID" />
+    </Key>
+    <Property Name="ECWritersID" Type="Int64" Nullable="false" />
+    <Property Name="WriterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ListOrder" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="NbOfFiles" Type="Int32" />
+    <Property Name="ADName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EPWriters">
+    <Key>
+      <PropertyRef Name="EPWritersID" />
+    </Key>
+    <Property Name="EPWritersID" Type="Int64" Nullable="false" />
+    <Property Name="WriterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ListOrder" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="NbOfFiles" Type="Int32" />
+    <Property Name="ADName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InternationalDir">
+    <Key>
+      <PropertyRef Name="InternationalDirID" />
+    </Key>
+    <Property Name="InternationalDirID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Directory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FilePrefix" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LockFiles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="paths" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MapCountry">
+    <Key>
+      <PropertyRef Name="MapCountryID" />
+    </Key>
+    <Property Name="MapCountryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewBaseName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsoCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MapLanguage">
+    <Key>
+      <PropertyRef Name="MapLanguageID" />
+    </Key>
+    <Property Name="MapLanguageID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewBaseName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsoCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MapModule">
+    <Key>
+      <PropertyRef Name="MapModuleID" />
+    </Key>
+    <Property Name="MapModuleID" Type="Int32" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TimeLife" Type="DateTime" Precision="3" />
+    <Property Name="MachineName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsService" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="SortIndex" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProcessState" Relationship="Self.FK_ProcessState_MapModule" FromRole="MapModule" ToRole="ProcessState" />
+  </EntityType>
+  <EntityType Name="MapSector">
+    <Key>
+      <PropertyRef Name="MapSectorID" />
+    </Key>
+    <Property Name="MapSectorID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewBaseDir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SectorName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MapStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="StatusName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapWS">
+    <Key>
+      <PropertyRef Name="WSID" />
+    </Key>
+    <Property Name="WSID" Type="Int64" Nullable="false" />
+    <Property Name="WSName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WSDescription" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="WSAccess" Relationship="Self.FK_WSAccess_MapWS" FromRole="MapWS" ToRole="WSAccess" />
+  </EntityType>
+  <EntityType Name="Mediargus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkingDate" Type="DateTime" Precision="3" />
+    <Property Name="Sourcename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MediargusFTPExclude">
+    <Key>
+      <PropertyRef Name="MediargusFTPExcludeID" />
+    </Key>
+    <Property Name="MediargusFTPExcludeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DirectoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MediargusFTPStatus">
+    <Key>
+      <PropertyRef Name="MediargusFTPStatusID" />
+    </Key>
+    <Property Name="MediargusFTPStatusID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DirName" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MoveFilesDetail">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+    <Property Name="Origin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Destination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Subfolders" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="DeleteEmptySubfolders" Type="Boolean" Nullable="false" />
+    <Property Name="Timing" Type="Int32" Nullable="false" />
+    <Property Name="DaysToKeep" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NewbaseServers">
+    <Key>
+      <PropertyRef Name="NewbaseServerID" />
+    </Key>
+    <Property Name="NewbaseServerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MachineName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsOnError" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="SendMail" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="NewbaseServices" Relationship="Self.FK_NewbaseServices_NewbaseServers" FromRole="NewbaseServers" ToRole="NewbaseServices" />
+  </EntityType>
+  <EntityType Name="NewbaseServices">
+    <Key>
+      <PropertyRef Name="NewbaseServiceID" />
+    </Key>
+    <Property Name="NewbaseServiceID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewbaseServerID" Type="Int32" />
+    <Property Name="IsOnError" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="SendMail" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="NewbaseServers" Relationship="Self.FK_NewbaseServices_NewbaseServers" FromRole="NewbaseServices" ToRole="NewbaseServers" />
+  </EntityType>
+  <EntityType Name="Parameters">
+    <Key>
+      <PropertyRef Name="APMDBID" />
+    </Key>
+    <Property Name="APMDBID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParamName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParamValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleID" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProcessState">
+    <Key>
+      <PropertyRef Name="ProcessStateId" />
+    </Key>
+    <Property Name="ProcessStateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MapModuleId" Type="Int32" Nullable="false" />
+    <Property Name="JobProcess" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProcessStartTime" Type="DateTime" Precision="3" />
+    <Property Name="ProcessState1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaxAlert" Type="Int32" />
+    <NavigationProperty Name="MapModule" Relationship="Self.FK_ProcessState_MapModule" FromRole="ProcessState" ToRole="MapModule" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UICustomerMail">
+    <Key>
+      <PropertyRef Name="UICustomerMailID" />
+    </Key>
+    <Property Name="UICustomerMailID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSAccess">
+    <Key>
+      <PropertyRef Name="WSAccessID" />
+    </Key>
+    <Property Name="WSAccessID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSID" Type="Int64" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MapWS" Relationship="Self.FK_WSAccess_MapWS" FromRole="WSAccess" ToRole="MapWS" />
+  </EntityType>
+  <EntityType Name="VCleanFiles">
+    <Key>
+      <PropertyRef Name="APMDBID" />
+      <PropertyRef Name="ParamName" />
+      <PropertyRef Name="FolderPath" />
+      <PropertyRef Name="KeepLastUnit" />
+      <PropertyRef Name="KeepLastValue" />
+      <PropertyRef Name="DeleteSubfolders" />
+    </Key>
+    <Property Name="APMDBID" Type="Int32" Nullable="false" />
+    <Property Name="ParamName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FolderPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeepLastUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeepLastValue" Type="Int32" Nullable="false" />
+    <Property Name="Filter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteSubfolders" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="VECWriters">
+    <Key>
+      <PropertyRef Name="ECWritersID" />
+      <PropertyRef Name="Info" />
+      <PropertyRef Name="DNS" />
+      <PropertyRef Name="ListOrder" />
+    </Key>
+    <Property Name="ECWritersID" Type="Int64" Nullable="false" />
+    <Property Name="WriterName" Type="String" MaxLength="63" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DNS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ListOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VEPWriters">
+    <Key>
+      <PropertyRef Name="EPWritersID" />
+      <PropertyRef Name="Cat1" />
+      <PropertyRef Name="Cat2" />
+      <PropertyRef Name="Cat34" />
+      <PropertyRef Name="ListOrder" />
+    </Key>
+    <Property Name="EPWritersID" Type="Int64" Nullable="false" />
+    <Property Name="WriterName" Type="String" MaxLength="63" FixedLength="false" Unicode="true" />
+    <Property Name="Cat1" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cat2" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cat34" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ListOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VMediargus">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StatusName" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="WorkingDate" Type="DateTime" Precision="3" />
+    <Property Name="Sourcename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_ProcessState_MapModule">
+    <End Role="MapModule" Type="Self.MapModule" Multiplicity="1" />
+    <End Role="ProcessState" Type="Self.ProcessState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MapModule">
+        <PropertyRef Name="MapModuleID" />
+      </Principal>
+      <Dependent Role="ProcessState">
+        <PropertyRef Name="MapModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSAccess_MapWS">
+    <End Role="MapWS" Type="Self.MapWS" Multiplicity="1" />
+    <End Role="WSAccess" Type="Self.WSAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MapWS">
+        <PropertyRef Name="WSID" />
+      </Principal>
+      <Dependent Role="WSAccess">
+        <PropertyRef Name="WSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewbaseServices_NewbaseServers">
+    <End Role="NewbaseServers" Type="Self.NewbaseServers" Multiplicity="0..1" />
+    <End Role="NewbaseServices" Type="Self.NewbaseServices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewbaseServers">
+        <PropertyRef Name="NewbaseServerID" />
+      </Principal>
+      <Dependent Role="NewbaseServices">
+        <PropertyRef Name="NewbaseServerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="APMDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CleanFilesDetail" EntityType="Self.CleanFilesDetail" />
+    <EntitySet Name="ECCategory" EntityType="Self.ECCategory" />
+    <EntitySet Name="ECWriters" EntityType="Self.ECWriters" />
+    <EntitySet Name="EPWriters" EntityType="Self.EPWriters" />
+    <EntitySet Name="InternationalDir" EntityType="Self.InternationalDir" />
+    <EntitySet Name="LockFiles" EntityType="Self.LockFiles" />
+    <EntitySet Name="MapCountry" EntityType="Self.MapCountry" />
+    <EntitySet Name="MapLanguage" EntityType="Self.MapLanguage" />
+    <EntitySet Name="MapModule" EntityType="Self.MapModule" />
+    <EntitySet Name="MapSector" EntityType="Self.MapSector" />
+    <EntitySet Name="MapStatus" EntityType="Self.MapStatus" />
+    <EntitySet Name="MapWS" EntityType="Self.MapWS" />
+    <EntitySet Name="Mediargus" EntityType="Self.Mediargus" />
+    <EntitySet Name="MediargusFTPExclude" EntityType="Self.MediargusFTPExclude" />
+    <EntitySet Name="MediargusFTPStatus" EntityType="Self.MediargusFTPStatus" />
+    <EntitySet Name="MoveFilesDetail" EntityType="Self.MoveFilesDetail" />
+    <EntitySet Name="NewbaseServers" EntityType="Self.NewbaseServers" />
+    <EntitySet Name="NewbaseServices" EntityType="Self.NewbaseServices" />
+    <EntitySet Name="Parameters" EntityType="Self.Parameters" />
+    <EntitySet Name="ProcessState" EntityType="Self.ProcessState" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UICustomerMail" EntityType="Self.UICustomerMail" />
+    <EntitySet Name="WSAccess" EntityType="Self.WSAccess" />
+    <EntitySet Name="VCleanFiles" EntityType="Self.VCleanFiles" />
+    <EntitySet Name="VECWriters" EntityType="Self.VECWriters" />
+    <EntitySet Name="VEPWriters" EntityType="Self.VEPWriters" />
+    <EntitySet Name="VMediargus" EntityType="Self.VMediargus" />
+    <AssociationSet Name="FK_ProcessState_MapModule" Association="Self.FK_ProcessState_MapModule">
+      <End Role="MapModule" EntitySet="MapModule" />
+      <End Role="ProcessState" EntitySet="ProcessState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSAccess_MapWS" Association="Self.FK_WSAccess_MapWS">
+      <End Role="MapWS" EntitySet="MapWS" />
+      <End Role="WSAccess" EntitySet="WSAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewbaseServices_NewbaseServers" Association="Self.FK_NewbaseServices_NewbaseServers">
+      <End Role="NewbaseServers" EntitySet="NewbaseServers" />
+      <End Role="NewbaseServices" EntitySet="NewbaseServices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

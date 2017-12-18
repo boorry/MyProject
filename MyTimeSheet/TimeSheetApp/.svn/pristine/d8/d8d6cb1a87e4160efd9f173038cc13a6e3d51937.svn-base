@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c698e42aee1046758b5f80b75988cd9c" Name="Diagram1">
+        <EntityTypeShape EntityType="TimeSheetDBModel.MapTaskState" Width="1.5" PointX="3.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.Project" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.ProjectHistory" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.ProjectTask" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.ProjectTaskUser" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.Task" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.TaskUserTime" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.VProjectHistory" Width="1.5" PointX="10" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.VProjectTask" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.VProjectTaskUser" Width="1.5" PointX="5.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.VTaskTime" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="TimeSheetDBModel.FK_ProjectTaskUser_MapTaskState" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK__ProjectHi__Proje__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK__ProjectTa__Proje__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK_ProjectTaskUser_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK__ProjectTa__TaskI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK__ProjectTa__TaskI__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="TimeSheetDBModel.FK_TaskUserTime_ProjectTaskUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TimeSheetDBModel.TaskUserTimeHistory" Width="1.5" PointX="10.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

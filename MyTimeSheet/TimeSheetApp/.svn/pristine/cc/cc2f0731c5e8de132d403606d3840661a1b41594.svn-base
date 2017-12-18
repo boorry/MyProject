@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using TimeSheetApp.data;
+using TimeSheetApp.Utils;
+
+namespace TimeSheetApp.Model
+{
+    public  class ServiceUserTimeHistory
+    {
+        private readonly TimeSheetDBEntities _context;
+
+
+        public ServiceUserTimeHistory()
+        {
+            _context = new TimeSheetDBEntities();
+        }
+
+        public  bool AjouterDansTaskUserTimeHistory(TaskUserTime taskUserTime)
+        {
+            
+            try
+            {
+                TaskUserTimeHistory taskUserTimeHistory = new TaskUserTimeHistory
+                {
+                    EndDate = taskUserTime.EndDate,
+                    startDate = taskUserTime.startDate,
+                    TaskUserTimeID = taskUserTime.TaskUserTimeID,
+                    CreatedBy = Environment.UserName
+                };
+                //taskUserTimeHistory.CreatedBy=taskUserTime.
+                _context.TaskUserTimeHistory.Add(taskUserTimeHistory);
+                General.SaveContextChanges("ajout dans TimeHistory id : " + taskUserTimeHistory.TaskUserTimeHistoryID,
+                    _context);
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+
+        }
+
+        public List<TaskUserTimeHistory> LireContenUserTimeHistories(VTaskTime vTaskTime)
+        {
+            try
+            {
+                var liste = _context.TaskUserTimeHistory.Where(x => x.TaskUserTimeID == vTaskTime.TaskUserTimeID).Distinct().ToList();
+                return liste;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="TimeSheetApp.View.AddNewProjectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" DataContext="{Binding AddNewProjectView, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="DimGray" Height="45" BorderThickness="1">
+                <DockPanel Height="45" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Button Style="{DynamicResource MyButton}" Margin="20,0,0,0" Command="{Binding ReturnTolistProject}"  Padding="0" Content="{materialDesign:PackIcon UndoVariant}" HorizontalAlignment="Left"/>
+                    <Button Style="{DynamicResource MyButton}" Margin="10,0,0,0" Command="{Binding AddedSaveChange}" Padding="0" Content="{materialDesign:PackIcon ContentSave}"  HorizontalAlignment="Left"/>
+
+                </DockPanel>
+            </Border>
+        </Grid>
+        <Border Height="36" VerticalAlignment="Top" Margin="0,44,0,0" BorderBrush="DimGray" BorderThickness="1">
+            <DockPanel>
+                <TextBlock  Height="25" Foreground="DimGray" Width="100" Margin="10,5,0,0" FontWeight="DemiBold" FontSize="14"  HorizontalAlignment="Left" Text="Nouveau Projet"/>
+            </DockPanel>
+        </Border>
+        <Grid>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="602" Width="398" Margin="75,84,0,0">
+                <TextBlock Text="Nom de Projet" Foreground="DimGray" Height="20" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="13" Width="100" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <TextBox x:Name="Tex1"  Foreground="DimGray" Height="25" VerticalContentAlignment="Top" Width="190" Margin="120,-25,0,0" Text="{Binding NewProjectName, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top">
+                    
+                </TextBox>
+                <TextBlock Text="Description" Foreground="DimGray" Height="20" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="13" Margin="10,25,0,0"/>
+                <TextBox Height="100" Foreground="DimGray" Width="190" BorderBrush="Gainsboro" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalContentAlignment="Top" Margin="120,-20,0,0" Text="{Binding DescriptionProject, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Client" Foreground="DimGray" Height="20" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="13" Margin="10,20,0,0"/>
+                <TextBox Height="25" Foreground="DimGray" Width="190" VerticalContentAlignment="Top" Text="{Binding AddCustomerName, Mode=TwoWay}" Margin="120,-25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Height="20" Width="20" ToolTip="Client" Content="{materialDesign:PackIcon Magnify}" Padding="0" Command="{Binding GotoClientList}" Background="Gainsboro" BorderBrush="Gray" Margin="250,-25,0,0"/>
+                <TextBlock Text="Date de Debut" Foreground="DimGray" Height="20" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="13" Margin="10,20,0,0"/>
+                <DatePicker Height="25" Foreground="DimGray" VerticalContentAlignment="Top" SelectedDate="{Binding StartDateProject, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Width="190" Margin="120,-25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Durée Estimée" Foreground="DimGray" Height="20" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="13" Margin="10,20,0,0"/>
+                <TextBox Height="25" materialDesign:ValidationAssist.UsePopup="True" Width="90" VerticalContentAlignment="Top" Margin="120,-25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBox.Text>
+                        <Binding Path="EstimateDuration" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <ExceptionValidationRule />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBlock Text="heures"  Height="20" Foreground="DimGray" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="11" Margin="220,-19,0,0"/>
+                <TextBlock Text="Tâches" Foreground="DimGray" Height="20" FontWeight="DemiBold" HorizontalAlignment="Left" FontSize="13" Margin="10,20,0,0"/>
+                <ComboBox Height="25" Foreground="Gray" Width="240" VerticalContentAlignment="Top" Margin="120,-25,0,0" SelectedItem="{Binding AddTaskProject, Mode=TwoWay}" ItemsSource="{Binding AddTaskList, Mode=OneWay}" DisplayMemberPath="TaskName" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <command:EventToCommand Command="{Binding AddNewTaskProject}" CommandParameter="{Binding AddTaskProject}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+                <Button Content="{materialDesign:PackIcon Plus}" ToolTip="Ajouter" Padding="0" Command="{Binding AddNewTaskProject}" Background="Gainsboro" BorderBrush="Gray" Width="20" Margin="360,-25,0,0" Height="20"/>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="100" Width="240" Margin="80,20,0,0" HorizontalScrollBarVisibility="Auto">
+                    <ItemsControl>
+                        <ListBox ItemsSource="{Binding ListTacheProject, Mode=TwoWay}" BorderBrush="Gray" BorderThickness="1" SelectedItem="{Binding RemoveMyTask, Mode=TwoWay}" DisplayMemberPath="TaskName" Width="240" Height="100">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseDoubleClick">
+                                    <command:EventToCommand Command="{Binding RemovMyTaskCommand}" CommandParameter="{Binding RemoveMyTask}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ListBox>
+                    </ItemsControl>
+                </ScrollViewer>
+                <Button Content="{materialDesign:PackIcon Minus}" ToolTip="Enlever" Padding="0" Command="{Binding RemovMyTaskCommand}" Background="Gainsboro" BorderBrush="Gray" Width="20" Margin="360,-180,0,0" Height="20"/>
+
+                <!--<materialDesign:TimePicker SelectedTime = "{Binding MyTime, Mode=TwoWay}" SelectedTimeFormat="Long" Is24Hours="True" BorderThickness="0" Background="Yellow" Width="115"/>-->
+
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Top"  HorizontalAlignment="Right" Height="592" Width="354" Margin="0,84,300,0">
+                <TextBlock Text="Céateur" Foreground="DimGray" Height="20" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="13" Width="100" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <TextBox Height="25" IsEnabled="False" Foreground="DimGray" VerticalContentAlignment="Top" Text="{Binding CreatorProject, Mode=TwoWay}" Margin="150,-25,14,0" VerticalAlignment="Top"/>
+                <TextBlock Text="Date de Création" Foreground="DimGray" Height="20" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="13" Width="130" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <TextBox Height="25" IsEnabled="False" Foreground="DimGray" VerticalContentAlignment="Top" Width="190" Text="{Binding CreationDate, Mode=TwoWay}" Margin="150,-25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+    <UserControl.Resources>
+
+        <Style x:Key="MyButton" TargetType="Button" >
+            <Setter Property="Foreground" Value="Gray" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Width" Value="35"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="BorderBrush" Value="White" ></Setter>
+        </Style>
+
+    </UserControl.Resources>
+</UserControl>

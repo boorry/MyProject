@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TimeSheetDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MapTaskState">
+    <Key>
+      <PropertyRef Name="MapTaskStateID" />
+    </Key>
+    <Property Name="MapTaskStateID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MapTaskStateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProjectTaskUser" Relationship="Self.FK_ProjectTaskUser_MapTaskState" FromRole="MapTaskState" ToRole="ProjectTaskUser" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EstimateDurationProject" Type="Single" />
+    <Property Name="DurationProject" Type="Single" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProjectHistory" Relationship="Self.FK__ProjectHi__Proje__37A5467C" FromRole="Project" ToRole="ProjectHistory" />
+    <NavigationProperty Name="ProjectTask" Relationship="Self.FK__ProjectTa__Proje__44FF419A" FromRole="Project" ToRole="ProjectTask" />
+    <NavigationProperty Name="ProjectTaskUser" Relationship="Self.FK_ProjectTaskUser_Project" FromRole="Project" ToRole="ProjectTaskUser" />
+  </EntityType>
+  <EntityType Name="ProjectHistory">
+    <Key>
+      <PropertyRef Name="ProjectHistoryID" />
+    </Key>
+    <Property Name="ProjectHistoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int64" Nullable="false" />
+    <Property Name="LastTime" Type="Single" />
+    <Property Name="NewTime" Type="Single" />
+    <Property Name="ActionDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Project" Relationship="Self.FK__ProjectHi__Proje__37A5467C" FromRole="ProjectHistory" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="ProjectTask">
+    <Key>
+      <PropertyRef Name="ProjectTaskID" />
+    </Key>
+    <Property Name="ProjectTaskID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int64" />
+    <Property Name="TaskID" Type="Int64" />
+    <NavigationProperty Name="Project" Relationship="Self.FK__ProjectTa__Proje__44FF419A" FromRole="ProjectTask" ToRole="Project" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__ProjectTa__TaskI__45F365D3" FromRole="ProjectTask" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="ProjectTaskUser">
+    <Key>
+      <PropertyRef Name="ProjectTaskUserID" />
+    </Key>
+    <Property Name="ProjectTaskUserID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int64" />
+    <Property Name="TaskID" Type="Int64" />
+    <Property Name="StartTask" Type="DateTime" Precision="3" />
+    <Property Name="EndTask" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionTime" Type="Single" />
+    <Property Name="MapTaskStateID" Type="Int64" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MapTaskState" Relationship="Self.FK_ProjectTaskUser_MapTaskState" FromRole="ProjectTaskUser" ToRole="MapTaskState" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectTaskUser_Project" FromRole="ProjectTaskUser" ToRole="Project" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__ProjectTa__TaskI__5070F446" FromRole="ProjectTaskUser" ToRole="Task" />
+    <NavigationProperty Name="TaskUserTime" Relationship="Self.FK_TaskUserTime_ProjectTaskUser" FromRole="ProjectTaskUser" ToRole="TaskUserTime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="TaskID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="ProjectTask" Relationship="Self.FK__ProjectTa__TaskI__45F365D3" FromRole="Task" ToRole="ProjectTask" />
+    <NavigationProperty Name="ProjectTaskUser" Relationship="Self.FK__ProjectTa__TaskI__5070F446" FromRole="Task" ToRole="ProjectTaskUser" />
+  </EntityType>
+  <EntityType Name="TaskUserTime">
+    <Key>
+      <PropertyRef Name="TaskUserTimeID" />
+    </Key>
+    <Property Name="TaskUserTimeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectTaskUserID" Type="Int64" />
+    <Property Name="MapTaskStateName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionTime" Type="Single" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="ProjectTaskUser" Relationship="Self.FK_TaskUserTime_ProjectTaskUser" FromRole="TaskUserTime" ToRole="ProjectTaskUser" />
+  </EntityType>
+  <EntityType Name="VProjectHistory">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="ProjectHistoryID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int64" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastTime" Type="Single" />
+    <Property Name="ProjectHistoryID" Type="Int64" Nullable="false" />
+    <Property Name="ActionDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VProjectTask">
+    <Key>
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="TaskName" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="ProjectID" Type="Int64" />
+    <Property Name="TaskID" Type="Int64" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="VProjectTaskUser">
+    <Key>
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="TaskName" />
+      <PropertyRef Name="ProjectTaskUserID" />
+      <PropertyRef Name="MapTaskStateID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int64" />
+    <Property Name="TaskID" Type="Int64" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MapTaskStateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartTask" Type="DateTime" Precision="3" />
+    <Property Name="EndTask" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionTime" Type="Single" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectTaskUserID" Type="Int64" Nullable="false" />
+    <Property Name="MapTaskStateID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VTaskTime">
+    <Key>
+      <PropertyRef Name="TaskUserTimeID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="TaskName" />
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="TaskUserTimeID" Type="Int64" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectID" Type="Int64" Nullable="false" />
+    <Property Name="ProjectTaskUserID" Type="Int64" />
+  </EntityType>
+  <Association Name="FK_ProjectTaskUser_MapTaskState">
+    <End Role="MapTaskState" Type="Self.MapTaskState" Multiplicity="0..1" />
+    <End Role="ProjectTaskUser" Type="Self.ProjectTaskUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MapTaskState">
+        <PropertyRef Name="MapTaskStateID" />
+      </Principal>
+      <Dependent Role="ProjectTaskUser">
+        <PropertyRef Name="MapTaskStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectHi__Proje__37A5467C">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectHistory" Type="Self.ProjectHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="ProjectHistory">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectTa__Proje__44FF419A">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTaskUser_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectTaskUser" Type="Self.ProjectTaskUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="ProjectTaskUser">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectTa__TaskI__45F365D3">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="TaskID" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectTa__TaskI__5070F446">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="ProjectTaskUser" Type="Self.ProjectTaskUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="TaskID" />
+      </Principal>
+      <Dependent Role="ProjectTaskUser">
+        <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskUserTime_ProjectTaskUser">
+    <End Role="ProjectTaskUser" Type="Self.ProjectTaskUser" Multiplicity="0..1" />
+    <End Role="TaskUserTime" Type="Self.TaskUserTime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectTaskUser">
+        <PropertyRef Name="ProjectTaskUserID" />
+      </Principal>
+      <Dependent Role="TaskUserTime">
+        <PropertyRef Name="ProjectTaskUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TimeSheetDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MapTaskState" EntityType="Self.MapTaskState" />
+    <EntitySet Name="Project" EntityType="Self.Project" />
+    <EntitySet Name="ProjectHistory" EntityType="Self.ProjectHistory" />
+    <EntitySet Name="ProjectTask" EntityType="Self.ProjectTask" />
+    <EntitySet Name="ProjectTaskUser" EntityType="Self.ProjectTaskUser" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Task" EntityType="Self.Task" />
+    <EntitySet Name="TaskUserTime" EntityType="Self.TaskUserTime" />
+    <EntitySet Name="VProjectHistory" EntityType="Self.VProjectHistory" />
+    <EntitySet Name="VProjectTask" EntityType="Self.VProjectTask" />
+    <EntitySet Name="VProjectTaskUser" EntityType="Self.VProjectTaskUser" />
+    <EntitySet Name="VTaskTime" EntityType="Self.VTaskTime" />
+    <AssociationSet Name="FK_ProjectTaskUser_MapTaskState" Association="Self.FK_ProjectTaskUser_MapTaskState">
+      <End Role="MapTaskState" EntitySet="MapTaskState" />
+      <End Role="ProjectTaskUser" EntitySet="ProjectTaskUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectHi__Proje__37A5467C" Association="Self.FK__ProjectHi__Proje__37A5467C">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectHistory" EntitySet="ProjectHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectTa__Proje__44FF419A" Association="Self.FK__ProjectTa__Proje__44FF419A">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTaskUser_Project" Association="Self.FK_ProjectTaskUser_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectTaskUser" EntitySet="ProjectTaskUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectTa__TaskI__45F365D3" Association="Self.FK__ProjectTa__TaskI__45F365D3">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectTa__TaskI__5070F446" Association="Self.FK__ProjectTa__TaskI__5070F446">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="ProjectTaskUser" EntitySet="ProjectTaskUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskUserTime_ProjectTaskUser" Association="Self.FK_TaskUserTime_ProjectTaskUser">
+      <End Role="ProjectTaskUser" EntitySet="ProjectTaskUser" />
+      <End Role="TaskUserTime" EntitySet="TaskUserTime" />
+    </AssociationSet>
+    <EntitySet Name="TaskUserTimeHistory" EntityType="TimeSheetDBModel.TaskUserTimeHistory" />
+  </EntityContainer>
+  <EntityType Name="TaskUserTimeHistory">
+    <Key>
+      <PropertyRef Name="TaskUserTimeHistoryID" />
+    </Key>
+    <Property Name="TaskUserTimeHistoryID" Type="Int64" Nullable="false" />
+    <Property Name="TaskUserTimeID" Type="Int64" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
